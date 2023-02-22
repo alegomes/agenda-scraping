@@ -6,12 +6,13 @@ PRODUCTIONS_KEY = 'nodes'
 
 def get_production_details(id, path):
     url = f"https://carre.nl/api/render{path}"
-    
+
     headers = {}
     response = requests.get(url, headers=headers)
 
     data = json.loads(response.text)
 
+    venue_id = 0
     if 'productions' in data:
         events = data['productions'][id]['events']
 
@@ -21,22 +22,32 @@ def get_production_details(id, path):
         if len(events) > 1:
             raise Exception(f'Weird. More than one event found for production {id}')
 
-        return {
-            'date' : events[0]['start_date']
-        }
+        show_date = events[0]['start_date']
+        venue_id = events[0]['venue_id']
     else:
         raise Exception(f'Production {id} not available anymore')
 
+    if 'venues' in data:
+        city = data['venues'][venue_id]['data']['city']
+    else:
+        city = 'Unknown'
+
+
+    return {
+        'show_date' : show_date,
+        'city' : city
+    }
 
 def save_productions(productions):
     file = open('productions.csv', 'a', newline='')
     writer = csv.writer(file)
 
-    writer.writerow(["ID", "Show Name", "Date", "Theater Name", "Link to Show"])
+    writer.writerow(["ID", "City", "Show Name", "Date", "Theater Name", "Link to Show"])
 
     for p in productions:
         writer.writerow([
             p['id'],
+            p['city'],
             p['showName'],
             p['date'],
             p['theaterName'],
@@ -61,12 +72,11 @@ def summarize_productions(productions):
 
             try:
                 details = get_production_details(id, path)
-                show_date = details['date']
-
                 summary.append({
                     'id': id,
+                    'city' : details['city'],
                     'showName' : show_name,
-                    'date' : show_date,
+                    'date' : details['show_date'][:10],
                     'theaterName' : theater_name,
                     'linkToShow' : f'https://carre.nl{path}',
                 })
