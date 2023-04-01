@@ -4,6 +4,9 @@ import re
 from datetime import datetime
 import csv
 
+from agenda_scraping_logging import AgendaScrapingLogging
+logger = AgendaScrapingLogging.get_logger('ams_carre')
+
 NOW = datetime.now()
 
 BASE_URL = 'https://www.dekleinekomedie.nl/agenda'
@@ -35,6 +38,9 @@ def _save_response_content(data):
     f.close()
 
 def _get_num_of_pages():
+    
+    logger.debug('Getting number of pages to iterate over')
+    
     url = f"{BASE_URL}"
 
     # TODO: Overhead request just to get page numbers. Optmize it later.
@@ -49,9 +55,14 @@ def _get_num_of_pages():
     pages_total  = tree.xpath(xpath_num_of_pages)[0].text
     num_of_pages = re.findall('van (\d+)', pages_total)[0]
 
+    logger.debug(f'{num_of_pages} pages found')
+
     return int(num_of_pages)
 
 def _get_productions_by_page(page=1):
+    
+    logger.debug(f'Getting productions of page {page}')
+
     url = f"{BASE_URL}?p={page}"
 
     response = requests.get(url, headers=HEADERS)
@@ -68,7 +79,8 @@ def _get_productions_by_page(page=1):
     xpath_start_date = 'div//div[@class="datetime"]/div[contains(@class, "date")]/div[@class="start"]'
     xpath_end_date = 'div//div[@class="datetime"]/div[contains(@class, "date")]/div[@class="end"]'
     xpath_time = 'div//div[@class="datetime"]/div[contains(@class, "time")]/*[@class="start"]'
-    xpath_url = 'div[@class="listItemWrapper"]/div[contains(@class,"thumb")]/a[@class="image"]'
+    # xpath_url = 'div[@class="listItemWrapper"]/div[contains(@class,"thumb")]/a[@class="image"]'
+    xpath_url = "./div[@class='listItemWrapper ']/div[@class='thumb ']/a/@href"
 
     # TODO: What if the production takes place more than one day?
     # xpath_subshows = '*[@id="show2148Dates"]'
@@ -80,7 +92,7 @@ def _get_productions_by_page(page=1):
     productions = []
     for p in productions_in_the_page:
         production_id = p.get('data-entry-id')
-        production_url = f"https://www.dekleinekomedie.nl{p.xpath(xpath_url)[0].get('href')}"
+        production_url = f"https://www.dekleinekomedie.nl{p.xpath(xpath_url)[0]}"
         production_title = p.xpath(xpath_title)[0].text
         production_start_date = p.xpath(xpath_start_date)[0].text.strip()
         
@@ -113,11 +125,15 @@ def _get_productions_by_page(page=1):
 
 def get_production_list():
  
+    logger.debug('Getting production list...')
+
     productions = []
     num_of_pages = _get_num_of_pages()
 
     for p in range(1, num_of_pages+1):
         productions = productions + _get_productions_by_page(p)
+
+    logger.debug(f'{len(productions)} productions found')
 
     return productions
 
@@ -125,6 +141,8 @@ def save_productions(productions):
     now = datetime.now()
     filename = f'data/ams-dekleinekomedie-productions-{now.strftime("%Y%m%d%H%M")}.csv'
     
+    logger.info(f'Saving productions to {filename}')
+
     file = open(filename, 'a', newline='')
     writer = csv.writer(file)
 
@@ -146,6 +164,7 @@ def save_productions(productions):
     file.close()
 
 def main():
+    logger.info('Starting scraping Amsterdam Dekleine')
     productions = get_production_list()
     save_productions(productions)
 

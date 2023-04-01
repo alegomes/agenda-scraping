@@ -19,6 +19,8 @@ stdout_handler = logging.StreamHandler(sys.stdout)
 stdout_handler.setLevel(logging.INFO)
 stdout_handler.setFormatter(logging.Formatter(LOGGING_FORMAT))
 
+logging.getLogger('urllib3.connectionpool').setLevel('INFO')
+
 class AgendaScrapingLogging:
 
     def get_logger(logger_name):
