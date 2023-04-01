@@ -14,6 +14,8 @@ def _save_response_content(data):
 
     filename = f'data/raw/ams-carre-productions-raw-{NOW.strftime("%Y%m%d%H%M")}.json'
 
+    logger.debug(f'Saving raw data at {filename}')
+
     f = open(filename, 'w')
     f.write(data)
     f.close()
