@@ -5,6 +5,9 @@ from datetime import datetime
 import csv
 import json
 
+from agenda_scraping_logging import AgendaScrapingLogging
+logger = AgendaScrapingLogging.get_logger('ams_delamar')
+
 NOW = datetime.now()
 
 BASE_URL = 'https://delamar.nl/ajax/showsearch/'
@@ -49,12 +52,16 @@ def _save_response_content(data):
 
     filename = f'data/raw/ams-delamar-productions-raw-{NOW.strftime("%Y%m%d%H%M")}.json'
 
+    logger.debug(f'Saving response raw content at {filename}')
+
     f = open(filename, 'w')
     f.write(data)
     f.close()
 
 def get_production_list():
  
+    logger.debug('Getting production list...')
+
     url = "https://delamar.nl/ajax/showsearch/"
 
     querystring = {
@@ -110,6 +117,7 @@ def get_production_list():
 
         del production_id, production_title, production_date, production_start_date, production_end_date, production_time, production_url
 
+    logger.debug(f'{len(productions)} found')
     return productions
 
 
@@ -119,6 +127,8 @@ def save_productions(productions):
 
     filename = f'data/ams-delamar-productions-{NOW.strftime("%Y%m%d%H%M")}.csv'
     
+    logger.info(f'Saving productions at {filename}')
+                 
     file = open(filename, 'a', newline='')
     writer = csv.writer(file)
 
@@ -138,6 +148,7 @@ def save_productions(productions):
         ])
 
 def main():
+    logger.info('Starting scraping Amsterdam Delamar')
     productions = get_production_list()
     save_productions(productions)
 
