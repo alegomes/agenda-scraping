@@ -2,7 +2,7 @@ import logging
 import sys
 
 LOGFILE='log/app.log'
-LOGGING_FORMAT='%(asctime)s [%(name)s] %(funcName)s - %(levelname)s - %(message)s'
+LOGGING_FORMAT='%(asctime)s [%(levelname)s] %(name)s - %(funcName)s - %(message)s'
 
 logging.basicConfig( level=logging.DEBUG, 
                     filename=LOGFILE, 

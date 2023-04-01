@@ -5,7 +5,7 @@ from datetime import datetime
 import csv
 
 from agenda_scraping_logging import AgendaScrapingLogging
-logger = AgendaScrapingLogging.get_logger('ams_carre')
+logger = AgendaScrapingLogging.get_logger('ams_dekleine')
 
 NOW = datetime.now()
 
