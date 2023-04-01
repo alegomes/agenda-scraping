@@ -3,6 +3,9 @@ import json
 import csv
 from datetime import datetime
 
+from agenda_scraping_logging import AgendaScrapingLogging
+logger = AgendaScrapingLogging.get_logger('ams_carre')
+
 NOW = datetime.now()
 PRODUCTIONS_KEY = 'nodes'
 
@@ -53,9 +56,9 @@ def get_production_details(id, path):
 
 def save_productions(productions):
     
-    # global NOW
-
     filename = f'data/ams-carre-productions-{NOW.strftime("%Y%m%d%H%M")}.csv'
+    
+    logger.info(f'Saving productions to {filename}')
 
     file = open(filename, 'a', newline='')
     writer = csv.writer(file)
@@ -76,18 +79,19 @@ def save_productions(productions):
     file.close()
 
 def summarize_productions(productions):
-
+    logger.debug('Summarizing productions...')
     summary = []
 
     for k in productions:
         kind = productions[k]['kind']
+        # logger.debug(f'Processing production of type {kind}')
         if kind == 'production-page':
             id = productions[k]['production_id']
             show_name = productions[k]['data']['title']
             theater_name = productions[k]['data']['siteTitle']
             path  = productions[k]['data']['url']
             
-            print(f'Enriching production {id} at {path}...')
+            logger.debug(f'Enriching production {id} at {path}...')
 
             try:
                 details = get_production_details(id, path)
@@ -101,12 +105,14 @@ def summarize_productions(productions):
                 })
 
             except Exception as e:
-                print(e)
+                logger.debug(e)
                 # Ignore
     
     return summary
 
 def get_production_list():
+    logger.debug('Getting production list...')
+
     url = "https://carre.nl/api/render/production-page-list-nl"
 
     headers = {}
@@ -117,9 +123,11 @@ def get_production_list():
 
     productions = data[PRODUCTIONS_KEY]
 
+    logger.debug(f'{len(productions)} productions found')
     return productions
             
 def main():
+    logger.info('Starting scraping Amsterdam Carre')
     productions = get_production_list()
     productions = summarize_productions(productions)
     save_productions(productions)
