@@ -3,6 +3,8 @@ import json
 import csv
 from datetime import datetime
 
+from file_saver import FileSaver
+
 from agenda_scraping_logging import AgendaScrapingLogging
 logger = AgendaScrapingLogging.get_logger('ams_carre')
 
@@ -56,30 +58,6 @@ def get_production_details(id, path):
         'city' : city
     }
 
-def save_productions(productions):
-    
-    filename = f'data/ams-carre-productions-{NOW.strftime("%Y%m%d%H%M")}.csv'
-    
-    logger.info(f'Saving productions to {filename}')
-
-    file = open(filename, 'a', newline='')
-    writer = csv.writer(file)
-
-    writer.writerow(["Timestamp", "City", "Theater Name", "ID",  "Show Name", "Date", "Link to Show"])
-
-    for p in productions:
-        writer.writerow([
-            NOW.strftime("%Y-%m-%d %H:%M"),
-            p['city'],
-            p['theaterName'],
-            p['id'],
-            p['showName'],            
-            p['date'],            
-            p['linkToShow']
-        ])
-
-    file.close()
-
 def summarize_productions(productions):
     logger.debug('Summarizing productions...')
     summary = []
@@ -128,12 +106,12 @@ def get_production_list():
     logger.debug(f'{len(productions)} productions found')
     return productions
             
-def main():
+def main(data_saver):
     logger.info('Starting scraping Amsterdam Carre')
     productions = get_production_list()
     productions = summarize_productions(productions)
-    save_productions(productions)
+    data_saver.save(productions)
 
 if __name__ == '__main__':
-    main()
+    main(FileSaver('ams-carre'))
 
