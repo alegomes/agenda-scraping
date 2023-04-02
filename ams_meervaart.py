@@ -8,7 +8,7 @@ import json
 from file_saver import FileSaver
 
 from agenda_scraping_logging import AgendaScrapingLogging
-logger = AgendaScrapingLogging.get_logger('ams_carre')
+logger = AgendaScrapingLogging.get_logger('ams_meervaart')
 
 NOW = datetime.now()
 THEATER = 'meervaart'
