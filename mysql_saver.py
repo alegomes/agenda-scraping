@@ -35,8 +35,11 @@ class MySQLSaver(DataSaver):
                 p['endDate'],           
                 p['linkToShow']
             ))
-            
+        
+        # try:
         mycursor.executemany(sql, values)
+        # except Exception as e:
+        #     logger.error(f'Error:\n{e}\n...with data {p}')
 
         self.connection.commit()
         self.connection.close()

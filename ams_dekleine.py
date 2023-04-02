@@ -2,14 +2,20 @@ import requests
 from lxml import etree
 import re
 from datetime import datetime
+import locale
 # import csv
 
 from file_saver import FileSaver
+from mysql_saver import MySQLSaver
 
 from agenda_scraping_logging import AgendaScrapingLogging
 logger = AgendaScrapingLogging.get_logger('ams_dekleine')
 
 NOW = datetime.now()
+
+# To avoid errors like 
+# ValueError: time data '2023-mei-1' does not match format '%Y-%b-%d'  
+locale.setlocale(locale.LC_TIME, 'nl_NL')
 
 BASE_URL = 'https://www.dekleinekomedie.nl/agenda'
 
@@ -61,6 +67,24 @@ def _get_num_of_pages():
 
     return int(num_of_pages)
 
+def _get_formatted_date(dutch_date):
+
+    regex = '\D\D +(\d+) +(\D+)'
+    match = re.findall(regex, dutch_date)
+
+    day = match[0][0]
+    month = match[0][1]
+    year = NOW.year
+    
+    show_date = datetime.strptime(f'{year}-{month}-{day}', '%Y-%b-%d')
+
+    year = NOW.year if show_date.month >= NOW.month else NOW.year + 1
+
+    show_date = datetime.strptime(f'{year}-{month}-{day}', '%Y-%b-%d').strftime('%Y-%m-%d')
+
+    return show_date
+
+    
 def _get_productions_by_page(page=1):
     
     logger.debug(f'Getting productions of page {page}')
@@ -71,13 +95,9 @@ def _get_productions_by_page(page=1):
     _save_response_content(response.text)
 
     xpath_productions = '//*[@id="content"]/div[3]/div[2]/div/ul/li'
-    # xpath_production = '//*[@id="content"]/div[3]/div[2]/div/ul/li[1]/div'
-    # xpath_title = '//*[@id="content"]/div[3]/div[2]/div/ul/li[1]/div/div[2]/div[1]/a/h2'
-    # xpath_date = '//*[@id="content"]/div[3]/div[2]/div/ul/li[1]/div/div[2]/div[2]/div/div/div[1]/div'
-    # xpath_hour = '//*[@id="content"]/div[3]/div[2]/div/ul/li[1]/div/div[2]/div[2]/div/div/div[2]/span'
-    # xpath_url = '//*[@id="content"]/div[3]/div[2]/div/ul/li[1]/div/div[2]/div[1]/a'
 
     xpath_title = 'div/div[2]/div[1]/a/h2'
+    xpath_subtitle = 'div/div[2]/div[1]/a/div[@class="subtitle"]'
     xpath_start_date = 'div//div[@class="datetime"]/div[contains(@class, "date")]/div[@class="start"]'
     xpath_end_date = 'div//div[@class="datetime"]/div[contains(@class, "date")]/div[@class="end"]'
     xpath_time = 'div//div[@class="datetime"]/div[contains(@class, "time")]/*[@class="start"]'
@@ -96,12 +116,13 @@ def _get_productions_by_page(page=1):
         production_id = p.get('data-entry-id')
         production_url = f"https://www.dekleinekomedie.nl{p.xpath(xpath_url)[0]}"
         production_title = p.xpath(xpath_title)[0].text
-        production_start_date = p.xpath(xpath_start_date)[0].text.strip()
+        production_subtitle = p.xpath(xpath_subtitle)[0].text
+        production_start_date = _get_formatted_date(p.xpath(xpath_start_date)[0].text.strip())
         
         try:
-            production_end_date = p.xpath(xpath_end_date)[0].text.strip()
+            production_end_date = _get_formatted_date(p.xpath(xpath_end_date)[0].text.strip())
         except:
-            production_end_date = ''
+            production_end_date = production_start_date
 
         try:
             production_time = p.xpath(xpath_time)[0].text.strip()
@@ -112,7 +133,7 @@ def _get_productions_by_page(page=1):
             'city' : 'Amsterdan',
             'theater' : 'De Kleine Komedie',
             'id' : production_id,
-            'showName' : production_title,
+            'showName' : f'{production_title} - {production_subtitle}' ,
             'startDate' : production_start_date,
             'endDate' : production_end_date,
             'time' : production_time,
@@ -172,4 +193,7 @@ def main(data_saver):
     data_saver.save(productions)
 
 if __name__ == '__main__':
-    main(FileSaver('ams-dekleine'))
+    saver = FileSaver('ams-dekleine')
+    saver = MySQLSaver()
+
+    main(saver)
