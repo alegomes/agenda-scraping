@@ -79,8 +79,8 @@ def summarize_productions(productions):
                     'id': id,
                     'city' : details['city'],
                     'showName' : show_name,
-                    'date' : details['show_date'][:10],
-                    'theaterName' : theater_name,
+                    'startDate' : details['show_date'][:10],
+                    'theater' : theater_name,
                     'linkToShow' : f'https://carre.nl{path}',
                 })
 
