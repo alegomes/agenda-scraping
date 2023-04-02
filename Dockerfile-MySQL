@@ -1,0 +1,17 @@
+# Building Image
+# docker build -f Dockerfile-MySQL -t agenda-scraping-db .
+#
+# Running Container:
+# docker run -d -p 3306:3306 -e MYSQL_ALLOW_EMPTY_PASSWORD=True -e MYSQL_ROOT_PASSWORD='' -e MYSQL_DATABASE=agenda_scraping -e MYSQL_USER=scraper -e MYSQL_PASSWORD=brentmartens agenda-scraping-db
+#
+# Get into it:
+# docker exec -it $(docker ps | grep agenda-scraping-db | cut -d ' ' -f 1) bash
+#
+# Access database from host machine:
+# mysql -h 127.0.0.1 -P 3306 -u scraper -p
+
+# Derivando da imagem oficial do MySQL
+FROM mysql:8.0.32
+
+# Adicionando os scripts SQL para serem executados na criação do banco
+COPY ./db/ /docker-entrypoint-initdb.d/

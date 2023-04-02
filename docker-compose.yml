@@ -1,0 +1,23 @@
+# Run it with
+# docker-compose up
+
+version: '3.5'
+services:
+    backend:
+        image: agenda-scraping
+        # ports:
+        #     - "80:80"
+    database:
+        image: agenda-sccraping-db
+        ports:
+            - "3306:3036"
+        environment:
+            MYSQL_ALLOW_EMPTY_PASSWORD: True
+            MYSQL_ROOT_PASSWORD: 
+            MYSQL_DATABASE: agenda_scraping
+            MYSQL_USER: scraper
+            MYSQL_PASSWORD: xxxxxxx
+        volumes:
+            db-volume:/var/lib/mysql
+volumes:
+    db-volume:
