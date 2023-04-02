@@ -4,6 +4,7 @@ import csv
 from datetime import datetime
 
 from file_saver import FileSaver
+from mysql_saver import MySQLSaver
 
 from agenda_scraping_logging import AgendaScrapingLogging
 logger = AgendaScrapingLogging.get_logger('ams_carre')
@@ -42,7 +43,8 @@ def get_production_details(id, path):
         if len(events) > 1:
             raise Exception(f'Weird. More than one event found for production {id}')
 
-        show_date = events[0]['start_date']
+        start_date = events[0]['start_date']
+        end_date = events[0]['end_date']
         venue_id = events[0]['venue_id']
     else:
         raise Exception(f'Production {id} not available anymore')
@@ -54,7 +56,8 @@ def get_production_details(id, path):
 
 
     return {
-        'show_date' : show_date,
+        'start_date' : start_date,
+        'end_date' : end_date,
         'city' : city
     }
 
@@ -79,7 +82,8 @@ def summarize_productions(productions):
                     'id': id,
                     'city' : details['city'],
                     'showName' : show_name,
-                    'startDate' : details['show_date'][:10],
+                    'startDate' : details['start_date'][:10],
+                    'endDate' : details['end_date'][:10],
                     'theater' : theater_name,
                     'linkToShow' : f'https://carre.nl{path}',
                 })
@@ -113,5 +117,8 @@ def main(data_saver):
     data_saver.save(productions)
 
 if __name__ == '__main__':
-    main(FileSaver('ams-carre'))
+    # saver = FileSaver('ams-carre')
+    saver = MySQLSaver()
+
+    main(saver)
 
