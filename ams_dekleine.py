@@ -2,7 +2,9 @@ import requests
 from lxml import etree
 import re
 from datetime import datetime
-import csv
+# import csv
+
+from file_saver import FileSaver
 
 from agenda_scraping_logging import AgendaScrapingLogging
 logger = AgendaScrapingLogging.get_logger('ams_dekleine')
@@ -137,36 +139,37 @@ def get_production_list():
 
     return productions
 
-def save_productions(productions):
-    now = datetime.now()
-    filename = f'data/ams-dekleinekomedie-productions-{now.strftime("%Y%m%d%H%M")}.csv'
+# def save_productions(productions):
+#     now = datetime.now()
+#     filename = f'data/ams-dekleinekomedie-productions-{now.strftime("%Y%m%d%H%M")}.csv'
     
-    logger.info(f'Saving productions to {filename}')
+#     logger.info(f'Saving productions to {filename}')
 
-    file = open(filename, 'a', newline='')
-    writer = csv.writer(file)
+#     file = open(filename, 'a', newline='')
+#     writer = csv.writer(file)
 
-    writer.writerow(["Timestamp", "City", "Theater Name", "ID", "Show Name", "Start Date", "End Date", "Time", "Link to Show"])
+#     writer.writerow(["Timestamp", "City", "Theater Name", "ID", "Show Name", "Start Date", "End Date", "Time", "Link to Show"])
 
-    for p in productions:
-        writer.writerow([
-            now.strftime("%Y-%m-%d %H:%M"),
-            p['city'],
-            p['theater'],
-            p['id'],            
-            p['showName'],
-            p['startDate'],
-            p['endDate'],
-            p['time'],
-            p['linkToShow']
-        ])
+#     for p in productions:
+#         writer.writerow([
+#             now.strftime("%Y-%m-%d %H:%M"),
+#             p['city'],
+#             p['theater'],
+#             p['id'],            
+#             p['showName'],
+#             p['startDate'],
+#             p['endDate'],
+#             p['time'],
+#             p['linkToShow']
+#         ])
 
-    file.close()
+#     file.close()
 
-def main():
+def main(data_saver):
     logger.info('Starting scraping Amsterdam Dekleine')
     productions = get_production_list()
-    save_productions(productions)
+    # save_productions(productions)
+    data_saver.save(productions)
 
 if __name__ == '__main__':
-    main()
+    main(FileSaver('ams-dekleine'))

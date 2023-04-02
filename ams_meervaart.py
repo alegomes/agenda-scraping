@@ -5,6 +5,8 @@ from datetime import datetime
 import csv
 import json
 
+from file_saver import FileSaver
+
 from agenda_scraping_logging import AgendaScrapingLogging
 logger = AgendaScrapingLogging.get_logger('ams_carre')
 
@@ -166,11 +168,12 @@ def save_productions(productions):
             p['linkToShow']
         ])
 
-def main():
+def main(data_saver):
     logger.info('Starting scraping Amsterdam Meervaart')
     productions = get_production_list()
-    save_productions(productions)
+    #save_productions(productions)
+    data_saver.save(productions)
 
 if __name__ == '__main__':
-    main()
+    main(FileSaver('ams-meervaart'))
 

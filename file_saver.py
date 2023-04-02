@@ -28,10 +28,10 @@ class FileSaver(DataSaver):
             writer.writerow([
                 NOW.strftime("%Y-%m-%d %H:%M"),
                 p['city'],
-                p['theaterName'],
+                p['theater'],
                 p['id'],
                 p['showName'],            
-                p['date'],            
+                p['startDate'],            
                 p['linkToShow']
             ])
 
