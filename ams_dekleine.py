@@ -11,6 +11,8 @@ from mysql_saver import MySQLSaver
 from agenda_scraping_logging import AgendaScrapingLogging
 logger = AgendaScrapingLogging.get_logger('ams_dekleine')
 
+from date_converter import convert_date
+
 NOW = datetime.now()
 
 # To avoid errors like 
@@ -67,23 +69,6 @@ def _get_num_of_pages():
 
     return int(num_of_pages)
 
-def _get_formatted_date(dutch_date):
-
-    regex = '\D\D +(\d+) +(\D+)'
-    match = re.findall(regex, dutch_date)
-
-    day = match[0][0]
-    month = match[0][1]
-    year = NOW.year
-    
-    show_date = datetime.strptime(f'{year}-{month}-{day}', '%Y-%b-%d')
-
-    year = NOW.year if show_date.month >= NOW.month else NOW.year + 1
-
-    show_date = datetime.strptime(f'{year}-{month}-{day}', '%Y-%b-%d').strftime('%Y-%m-%d')
-
-    return show_date
-
     
 def _get_productions_by_page(page=1):
     
@@ -117,10 +102,10 @@ def _get_productions_by_page(page=1):
         production_url = f"https://www.dekleinekomedie.nl{p.xpath(xpath_url)[0]}"
         production_title = p.xpath(xpath_title)[0].text
         production_subtitle = p.xpath(xpath_subtitle)[0].text
-        production_start_date = _get_formatted_date(p.xpath(xpath_start_date)[0].text.strip())
+        production_start_date = convert_date(p.xpath(xpath_start_date)[0].text.strip())
         
         try:
-            production_end_date = _get_formatted_date(p.xpath(xpath_end_date)[0].text.strip())
+            production_end_date = convert_date(p.xpath(xpath_end_date)[0].text.strip())
         except:
             production_end_date = production_start_date
 
