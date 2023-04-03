@@ -2,8 +2,6 @@ import requests
 from lxml import etree
 import re
 from datetime import datetime
-import locale
-# import csv
 
 from file_saver import FileSaver
 from mysql_saver import MySQLSaver
@@ -15,9 +13,6 @@ from date_converter import convert_date
 
 NOW = datetime.now()
 
-# To avoid errors like 
-# ValueError: time data '2023-mei-1' does not match format '%Y-%b-%d'  
-locale.setlocale(locale.LC_TIME, 'nl_NL')
 
 BASE_URL = 'https://www.dekleinekomedie.nl/agenda'
 
