@@ -6,6 +6,9 @@ import csv
 import json
 
 from file_saver import FileSaver
+from mysql_saver import MySQLSaver
+
+from date_converter import convert_date
 
 from agenda_scraping_logging import AgendaScrapingLogging
 logger = AgendaScrapingLogging.get_logger('ams_meervaart')
@@ -60,8 +63,8 @@ def _get_start_end_dates(fulldate):
 
 
     if len(match) == 1 :
-        production_start_date = match[0]
-        production_end_date = ''
+        production_start_date = convert_date(match[0])
+        production_end_date = convert_date(match[0])
     elif len(match) > 1:  
         #   do 13 apr t/m zo 07 mei 
         # or
@@ -70,8 +73,8 @@ def _get_start_end_dates(fulldate):
         # or
         #   vr 10 nov vr 17 nov            # TODO: It's an interval or two dates only?
 
-        production_start_date = match[0]
-        production_end_date = match[1]
+        production_start_date = convert_date(match[0])
+        production_end_date = convert_date(match[1])
     else:
         production_start_date = f'!!! {fulldate} !!!' # TODO: Translate to a date?
         production_end_date = ''
@@ -97,9 +100,11 @@ def get_production_list():
 
     _save_response_content(response.text)
 
-    xpath_productions = '//div[contains(@class, "show")]'
+    # Ignore highlights to avoid duplication
+    xpath_productions = '//div[contains(@class, "show") and not(contains(@class, "uitgelicht"))]'
 
     xpath_title = './/div[@class="info"]/h3/text()'
+    xpath_subtitle = './/div[@class="info"]/h4/text()'
     xpath_artist = './/div[@class="info"]/h4/text()'
     xpath_date = './/div[@class="info"]/div[contains(@class, "date")]/span/text()'
     xpath_url = './/a/@href'
@@ -112,6 +117,7 @@ def get_production_list():
 
         # production_title = p.xpath(xpath_title)[0]
         production_title = _get_xpath(p, xpath_title)
+        production_subtitle = _get_xpath(p, xpath_subtitle)
         production_artist = _get_xpath(p, xpath_artist) # TODO: Relevant data?
         production_url = f'https://www.meervaart.nl{_get_xpath(p, xpath_url)}'
         production_date = _get_xpath(p, xpath_date)
@@ -128,7 +134,7 @@ def get_production_list():
             'city' : 'Amsterdan',
             'theater' : 'Meervaart',
             'id' : production_id,
-            'showName' : production_title,
+            'showName' : f'{production_title} - {production_subtitle}',
             'startDate' : production_start_date,
             'endDate' : production_end_date,
             'time' : production_time,
@@ -175,5 +181,9 @@ def main(data_saver):
     data_saver.save(productions)
 
 if __name__ == '__main__':
-    main(FileSaver('ams-meervaart'))
+    # saver = FileSaver('ams-delamar')
+    saver = MySQLSaver()
+
+    main(saver)
+
 
