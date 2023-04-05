@@ -1,0 +1,1113 @@
+{
+    "node": {
+      "id": "home-nl",
+      "kind": "home",
+      "data": {
+        "alternativeHomepage": false,
+        "copyright": "<p>&copy; Copyright Koninklijk Theater Carr&eacute;. Alle rechten voorbehouden.<br />\nKvK Amsterdam 33.02.39.60 &middot; BTW NL001438657.B01&nbsp;&middot;&nbsp;<a href=\"https://carre.nl/pagina/algemene-bezoekersvoorwaarden\">Algemene bezoekersvoorwaarden</a></p>\n",
+        "headerImagePositionDay": "center top",
+        "headerImagePositionNight": "center top",
+        "headerTitle": "Welkom",
+        "hideHeaderTitleMobile": false,
+        "main_sponsor_url": "https://carre.nl/pagina/sponsoring",
+        "maxHighlights": 9,
+        "pinnedSlideIDs": [
+          "01G279QKVWKTHGW1G5CAJ53V1R"
+        ],
+        "siteTitle": "Koninklijk Theater Carré Amsterdam",
+        "subscribeNewsletterHeading": "Carré nieuwsbrief",
+        "subscribeNewsletterSubheading": "Blijf altijd op de hoogte van de nieuwste voorstellingen bij Carré.",
+        "youtubeURL": null
+      },
+      "relations": {
+        "banners": [],
+        "footer": "DEFAULT_FOOTER",
+        "header_image_day": "01F8QD8KDW98EC99J7PV6XAZG7",
+        "header_image_mobile": null,
+        "header_image_night": "01F8QD9ZKHZAEM4GXS1J9BN8VN",
+        "image_sponsor": null,
+        "menu_main": "01DF8YQVDZ73ZJGN1FR5ESJHM5",
+        "menu_top": "01DFB6QX4F96PV1G5Y8VF97GKR",
+        "newsPageQuery": "home-news-pages-nl",
+        "subfooter": "DEFAULT_SUBFOOTER",
+        "text_widget": "01EKAMZWZDNHQ10Z1GQVR4NE7F",
+        "text_widget_2": null
+      }
+    },
+    "url_data": {},
+    "is_preview": false,
+    "is_redirect": false,
+    "nodes": {
+      "01DF8GMTD916Q97JT9D02BJQKE": {
+        "id": "01DF8GMTD916Q97JT9D02BJQKE",
+        "kind": "text_widget",
+        "data": {
+          "content": "<p><strong>Wilt u kaarten reserveren?</strong><br />\nBekijk dan onze <a href=\"/agenda\">Agenda</a>.</p>\n\n<p><strong>Bent u op zoek naar uw kaarten?</strong><br />\nMaak dan eenvoudig een <a href=\"https://mijn.carre.nl/inloggen\">Mijn Carr&eacute; account</a> aan.</p>\n\n<p><strong>Heeft u vragen over uw reservering?&nbsp;</strong><br />\nNeem dan contact op met onze klantenservice.&nbsp;<br />\n&nbsp;<br />\n<strong>Klantenservice</strong><br />\nStuur&nbsp;een mail naar <a href=\"mailto:service@carre.nl\">service@carre.nl</a>&nbsp;of bel ons op&nbsp;<a href=\"tel:+31205249453\">020-5249453</a>&nbsp;(van ma t/m vr &eacute;n voorstellingsdagen van 14:00-17:00 uur).</p>\n",
+          "paymentmethods": null,
+          "socials": null,
+          "title": "Reserveringen"
+        },
+        "publication_date": "2019-07-01T10:00:00+02:00"
+      },
+      "01DF8GS1F20XPBNX4BATG0R1CW": {
+        "id": "01DF8GS1F20XPBNX4BATG0R1CW",
+        "kind": "text_widget",
+        "data": {
+          "content": "<p>Klik <a href=\"https://carre.nl/pagina/veelgestelde-vragen\">hier</a> voor antwoorden op de veelgestelde vragen.</p>\n",
+          "paymentmethods": null,
+          "socials": true,
+          "title": "Veelgestelde vragen"
+        },
+        "publication_date": "2019-07-01T10:00:00+02:00"
+      },
+      "01DF8NDS2SAW08502TFK2YF6B0_breadcrumb": {
+        "id": "01DF8NDS2SAW08502TFK2YF6B0_breadcrumb",
+        "kind": "page-breadcrumb",
+        "data": {
+          "heading": "Eten & drinken",
+          "subHeading": null,
+          "title": "Eten & drinken",
+          "url": "/pagina/eten-drinken",
+          "urlTranslated": "/en/page/food-and-drinks"
+        },
+        "publication_date": "2019-07-01T00:00:00+02:00"
+      },
+      "01DF8VBHBMZWWB9V0GT7A9CHKC_breadcrumb": {
+        "id": "01DF8VBHBMZWWB9V0GT7A9CHKC_breadcrumb",
+        "kind": "page-breadcrumb",
+        "data": {
+          "heading": "Uw bezoek",
+          "subHeading": null,
+          "title": "Uw bezoek",
+          "url": "/pagina/plan-uw-bezoek",
+          "urlTranslated": "/en/page/plan-your-visit"
+        }
+      },
+      "01DF8YQVDZ73ZJGN1FR5ESJHM5": {
+        "id": "01DF8YQVDZ73ZJGN1FR5ESJHM5",
+        "kind": "menu",
+        "data": {
+          "title": ""
+        },
+        "relations": {
+          "items": [
+            "01DFB6JRNK9H093SAWE8ASY1KW",
+            "01DFB6NW9REA53YRH1GAFGDYGV",
+            "01EC23B1RSTSBR9ZHBC4A1KTBQ",
+            "01DGPMJEE8DT85N6V6S5X5ZAHF",
+            "01EGR7A9F12P6NXC2YVZAJACTZ"
+          ]
+        }
+      },
+      "01DFB6JRNK9H093SAWE8ASY1KW": {
+        "id": "01DFB6JRNK9H093SAWE8ASY1KW",
+        "kind": "menu_item",
+        "data": {
+          "link_url": "https://carre.nl/agenda",
+          "title": "Agenda",
+          "visible_in_aally": null
+        },
+        "relations": {
+          "icon": null,
+          "link": null,
+          "submenu": null
+        }
+      },
+      "01DFB6NW9REA53YRH1GAFGDYGV": {
+        "id": "01DFB6NW9REA53YRH1GAFGDYGV",
+        "kind": "menu_item",
+        "data": {
+          "title": "Uw bezoek",
+          "visible_in_aally": null
+        },
+        "relations": {
+          "icon": null,
+          "link": "01DF8VBHBMZWWB9V0GT7A9CHKC_breadcrumb",
+          "submenu": "01DH8M18KP81JVZBXVFHQFMN5G"
+        }
+      },
+      "01DFB6QX4F96PV1G5Y8VF97GKR": {
+        "id": "01DFB6QX4F96PV1G5Y8VF97GKR",
+        "kind": "menu",
+        "data": {
+          "title": ""
+        },
+        "relations": {
+          "items": [
+            "01DGPMN1Z9HG9WG8QZNFNBCJB5",
+            "01DGPMNWDDQS2VCRQWDHBC0MQ5",
+            "01FF57576337E3SX2S061NJH2E",
+            "01DGPMQ3386HVACXS1J0792YD5",
+            "01G88P8K3AA0DTWVKRNDQ5TJ4H"
+          ]
+        }
+      },
+      "01DFDDR5MP3MZQWH2DR5N7N9Z1_breadcrumb": {
+        "id": "01DFDDR5MP3MZQWH2DR5N7N9Z1_breadcrumb",
+        "kind": "page-breadcrumb",
+        "data": {
+          "heading": "Theaterarrangementen",
+          "subHeading": null,
+          "title": "Theaterarrangementen",
+          "url": "/pagina/theaterarrangementen",
+          "urlTranslated": "/en/page/packages"
+        },
+        "publication_date": "2019-07-01T09:53:00+02:00"
+      },
+      "01DFGRD9XQ2HRSYWBWJ9PSHDGT_breadcrumb": {
+        "id": "01DFGRD9XQ2HRSYWBWJ9PSHDGT_breadcrumb",
+        "kind": "page-breadcrumb",
+        "data": {
+          "heading": "Evenementen",
+          "subHeading": null,
+          "title": "Evenementen",
+          "url": "/pagina/evenement",
+          "urlTranslated": "/en/page/business-meetings"
+        },
+        "publication_date": "2019-07-01T16:58:00+02:00"
+      },
+      "01DG2J7G7NNAQ9ADPS9KMJJ9YH_breadcrumb": {
+        "id": "01DG2J7G7NNAQ9ADPS9KMJJ9YH_breadcrumb",
+        "kind": "page-breadcrumb",
+        "data": {
+          "heading": "Algemene informatie",
+          "subHeading": null,
+          "title": "Algemene informatie",
+          "url": "/pagina/algemene-informatie",
+          "urlTranslated": "/en/page/general-information"
+        },
+        "publication_date": "2019-07-01T00:00:00+02:00"
+      },
+      "01DGCHW3KSB481H0BZ861Z26T5_breadcrumb": {
+        "id": "01DGCHW3KSB481H0BZ861Z26T5_breadcrumb",
+        "kind": "page-breadcrumb",
+        "data": {
+          "heading": "Kaartverkoop",
+          "subHeading": null,
+          "title": "Kaartverkoop",
+          "url": "/pagina/kaartverkoop",
+          "urlTranslated": "/en/page/ordering-tickets"
+        },
+        "publication_date": "2019-07-01T00:00:00+02:00"
+      },
+      "01DGCJ8G2X647BFWA85VCTRHPH_breadcrumb": {
+        "id": "01DGCJ8G2X647BFWA85VCTRHPH_breadcrumb",
+        "kind": "page-breadcrumb",
+        "data": {
+          "heading": "Bereikbaarheid",
+          "subHeading": null,
+          "title": "Bereikbaarheid",
+          "url": "/pagina/bereikbaarheid",
+          "urlTranslated": "/en/page/getting-here"
+        },
+        "publication_date": "2019-07-01T00:00:00+02:00"
+      },
+      "01DGCJJ59RMDY15ME3428VME3G_breadcrumb": {
+        "id": "01DGCJJ59RMDY15ME3428VME3G_breadcrumb",
+        "kind": "page-breadcrumb",
+        "data": {
+          "heading": "Toegankelijkheid",
+          "subHeading": null,
+          "title": "Toegankelijkheid",
+          "url": "/pagina/toegankelijkheid",
+          "urlTranslated": null
+        },
+        "publication_date": "2019-07-01T00:00:00+02:00"
+      },
+      "01DGEZW4A5N07ZMX74NN2A9RV2_breadcrumb": {
+        "id": "01DGEZW4A5N07ZMX74NN2A9RV2_breadcrumb",
+        "kind": "page-breadcrumb",
+        "data": {
+          "heading": "Carré Fonds",
+          "subHeading": null,
+          "title": "Carré Fonds",
+          "url": "/pagina/carrefonds",
+          "urlTranslated": "/en/page/carre-fund"
+        },
+        "publication_date": "2019-07-01T00:00:00+02:00"
+      },
+      "01DGF3KKZA8BKCZ2WMZTN74TJ4_breadcrumb": {
+        "id": "01DGF3KKZA8BKCZ2WMZTN74TJ4_breadcrumb",
+        "kind": "page-breadcrumb",
+        "data": {
+          "heading": "Partnerships en sponsoring",
+          "subHeading": null,
+          "title": "Partnerships en sponsoring",
+          "url": "/pagina/sponsoring",
+          "urlTranslated": "/en/page/sponsors"
+        },
+        "publication_date": "2019-07-01T00:00:00+02:00"
+      },
+      "01DGJ7CTWRXDXSTS9F7GNT1Z1W_breadcrumb": {
+        "id": "01DGJ7CTWRXDXSTS9F7GNT1Z1W_breadcrumb",
+        "kind": "page-breadcrumb",
+        "data": {
+          "heading": "Over Carré",
+          "subHeading": null,
+          "title": "Over Carré",
+          "url": "/pagina/over-carre",
+          "urlTranslated": "/en/page/about-carre"
+        },
+        "publication_date": "2019-07-01T00:00:00+02:00"
+      },
+      "01DGPMJEE8DT85N6V6S5X5ZAHF": {
+        "id": "01DGPMJEE8DT85N6V6S5X5ZAHF",
+        "kind": "menu_item",
+        "data": {
+          "title": "Zakelijk",
+          "visible_in_aally": false
+        },
+        "relations": {
+          "icon": null,
+          "link": "01DGF3KKZA8BKCZ2WMZTN74TJ4_breadcrumb",
+          "submenu": "01DHVDKMMW7TRF5W0187H5X9P1"
+        },
+        "publication_date": "2019-07-01T00:00:00+02:00"
+      },
+      "01DGPMN1Z9HG9WG8QZNFNBCJB5": {
+        "id": "01DGPMN1Z9HG9WG8QZNFNBCJB5",
+        "kind": "menu_item",
+        "data": {
+          "title": "Over Carré",
+          "visible_in_aally": null
+        },
+        "relations": {
+          "icon": null,
+          "link": "01DGJ7CTWRXDXSTS9F7GNT1Z1W_breadcrumb",
+          "submenu": null
+        },
+        "publication_date": "2019-07-01T00:00:00+02:00"
+      },
+      "01DGPMNWDDQS2VCRQWDHBC0MQ5": {
+        "id": "01DGPMNWDDQS2VCRQWDHBC0MQ5",
+        "kind": "menu_item",
+        "data": {
+          "title": "Bereikbaarheid",
+          "visible_in_aally": null
+        },
+        "relations": {
+          "icon": null,
+          "link": "01DGCJ8G2X647BFWA85VCTRHPH_breadcrumb",
+          "submenu": null
+        },
+        "publication_date": "2019-07-01T00:00:00+02:00"
+      },
+      "01DGPMQ3386HVACXS1J0792YD5": {
+        "id": "01DGPMQ3386HVACXS1J0792YD5",
+        "kind": "menu_item",
+        "data": {
+          "link_url": "https://apps.ticketmatic.com/widgets/carre/basket?accesskey=71a75cd3e13076d9b28b2706&edit=yes&flow=basketwithcheckout&oncompletion=orderdetail&reservemoretickets=yes&returnurl=https%3A%2F%2Fcarre.nl%2Fagenda&saleschannelid=2&skinid=1&withauthentication=no&signature=29169cdd76ec5d6724c1ef6f4a6b2590437096962260c73e3761a1b492bfb542",
+          "title": "Winkelmand",
+          "visible_in_aally": null
+        },
+        "relations": {
+          "icon": "01GA3MJT1SM1ZXBGBQEP89TCS2",
+          "link": null,
+          "submenu": null
+        }
+      },
+      "01DH8M0P8N357FF8RF9WFQ0XTY": {
+        "id": "01DH8M0P8N357FF8RF9WFQ0XTY",
+        "kind": "menu_item",
+        "data": {
+          "title": "Algemene informatie",
+          "visible_in_aally": null
+        },
+        "relations": {
+          "icon": null,
+          "link": "01DG2J7G7NNAQ9ADPS9KMJJ9YH_breadcrumb",
+          "submenu": null
+        },
+        "publication_date": "2019-07-01T00:00:00+02:00"
+      },
+      "01DH8M18KP81JVZBXVFHQFMN5G": {
+        "id": "01DH8M18KP81JVZBXVFHQFMN5G",
+        "kind": "menu",
+        "data": {
+          "title": "Uw bezoek"
+        },
+        "relations": {
+          "items": [
+            "01DH8M0P8N357FF8RF9WFQ0XTY",
+            "01DH90QAXDFG7RXQJVVVPY3TT8",
+            "01DH90R2JP4Y46FA853ANRT2XP",
+            "01DH90SFWBX5ARVC6G61AE6ZGR",
+            "01DYJ2PPWPFWV7PNWADBWNQTV0",
+            "01EKWFYTN7FTA7EZN902B3Y4SF"
+          ]
+        }
+      },
+      "01DH90QAXDFG7RXQJVVVPY3TT8": {
+        "id": "01DH90QAXDFG7RXQJVVVPY3TT8",
+        "kind": "menu_item",
+        "data": {
+          "title": "Kaartverkoop",
+          "visible_in_aally": null
+        },
+        "relations": {
+          "icon": null,
+          "link": "01DGCHW3KSB481H0BZ861Z26T5_breadcrumb",
+          "submenu": null
+        },
+        "publication_date": "2019-07-01T00:00:00+02:00"
+      },
+      "01DH90R2JP4Y46FA853ANRT2XP": {
+        "id": "01DH90R2JP4Y46FA853ANRT2XP",
+        "kind": "menu_item",
+        "data": {
+          "title": "Bereikbaarheid",
+          "visible_in_aally": null
+        },
+        "relations": {
+          "icon": null,
+          "link": "01DGCJ8G2X647BFWA85VCTRHPH_breadcrumb",
+          "submenu": null
+        },
+        "publication_date": "2019-07-01T00:00:00+02:00"
+      },
+      "01DH90SFWBX5ARVC6G61AE6ZGR": {
+        "id": "01DH90SFWBX5ARVC6G61AE6ZGR",
+        "kind": "menu_item",
+        "data": {
+          "title": "Toegankelijkheid",
+          "visible_in_aally": null
+        },
+        "relations": {
+          "icon": null,
+          "link": "01DGCJJ59RMDY15ME3428VME3G_breadcrumb",
+          "submenu": null
+        },
+        "publication_date": "2019-07-01T00:00:00+02:00"
+      },
+      "01DHV9XPQ2TGGKVWQ1XY926HPZ": {
+        "id": "01DHV9XPQ2TGGKVWQ1XY926HPZ",
+        "kind": "text_widget",
+        "data": {
+          "content": "<ul>\n\t<li><a href=\"https://carre.nl/pagina/veelgestelde-vragen\">Veelgestelde vragen</a></li>\n\t<li><a href=\"/pagina/algemene-informatie\" target=\"_blank\">Algemene informatie</a></li>\n\t<li><a href=\"/pagina/gevonden-voorwerpen\" target=\"_blank\">Voorwerp verloren?</a></li>\n\t<li><a href=\"/pagina/privacy-statement\" target=\"_blank\">Privacy Statement</a></li>\n\t<li><a href=\"https://carre.nl/pagina/technische-gegevens\">Technische gegevens</a></li>\n\t<li><a href=\"/pagina/cookies\" target=\"_blank\">Cookies</a></li>\n\t<li><a href=\"https://koninklijktheatercarre.recruitee.com/\">Vacatures</a></li>\n\t<li><a href=\"/pagina/contact\" target=\"_blank\">Contact</a></li>\n</ul>\n\n<p>&nbsp;</p>\n",
+          "paymentmethods": null,
+          "socials": null,
+          "title": "Ga naar"
+        }
+      },
+      "01DHVA1A8JJMS1T6W481Q81QCY": {
+        "id": "01DHVA1A8JJMS1T6W481Q81QCY",
+        "kind": "text_widget",
+        "data": {
+          "content": "<p><strong>Bezoekadres</strong><br />\nAmstel 115 - 125<br />\n1018 EM Amsterdam</p>\n\n<p><strong>Postadres</strong><br />\nPostbus 20202<br />\n1000 HE Amsterdam</p>\n\n<p><strong>Klantenservice telefoon</strong><br />\n<a href=\"tel:+31205249453\">020-5249453</a></p>\n\n<p><strong>Receptie gebouw</strong><br />\n<a href=\"tel:+31205249494\">020-5249494&nbsp;</a></p>\n",
+          "paymentmethods": true,
+          "socials": null,
+          "title": "Contact"
+        }
+      },
+      "01DHVD8SXCQC4VEH6DSNE1BNCP": {
+        "id": "01DHVD8SXCQC4VEH6DSNE1BNCP",
+        "kind": "menu_item",
+        "data": {
+          "link_url": "https://carre.nl/voorstelling/borrel-arrangement",
+          "title": "Arrangementen",
+          "visible_in_aally": null
+        },
+        "relations": {
+          "icon": null,
+          "link": null,
+          "submenu": null
+        }
+      },
+      "01DHVDDE5X9YESQA6MW9GX3M0S": {
+        "id": "01DHVDDE5X9YESQA6MW9GX3M0S",
+        "kind": "menu",
+        "data": {
+          "title": "Eten & Drinken"
+        },
+        "relations": {
+          "items": [
+            "01DHVD8SXCQC4VEH6DSNE1BNCP",
+            "01FGP8146YNMFJEGAWF4CBHQY1",
+            "01F46J6AF42HNZ7A6Q8QMBBK5N"
+          ]
+        }
+      },
+      "01DHVDH6S2MQ2V5WHF6FB7EQPE": {
+        "id": "01DHVDH6S2MQ2V5WHF6FB7EQPE",
+        "kind": "menu_item",
+        "data": {
+          "title": "Theaterarrangementen",
+          "visible_in_aally": null
+        },
+        "relations": {
+          "icon": null,
+          "link": "01DFDDR5MP3MZQWH2DR5N7N9Z1_breadcrumb",
+          "submenu": null
+        },
+        "publication_date": "2019-07-01T09:53:00+02:00"
+      },
+      "01DHVDK93PQZ7GTDAYTBC4ED62": {
+        "id": "01DHVDK93PQZ7GTDAYTBC4ED62",
+        "kind": "menu_item",
+        "data": {
+          "title": "Evenementen",
+          "visible_in_aally": null
+        },
+        "relations": {
+          "icon": null,
+          "link": "01DFGRD9XQ2HRSYWBWJ9PSHDGT_breadcrumb",
+          "submenu": null
+        },
+        "publication_date": "2019-07-01T16:58:00+02:00"
+      },
+      "01DHVDKMMW7TRF5W0187H5X9P1": {
+        "id": "01DHVDKMMW7TRF5W0187H5X9P1",
+        "kind": "menu",
+        "data": {
+          "title": "Zakelijk"
+        },
+        "relations": {
+          "items": [
+            "01DHVDH6S2MQ2V5WHF6FB7EQPE",
+            "01DHVDPMET15889FZ1BESZ80FE",
+            "01DHVDK93PQZ7GTDAYTBC4ED62"
+          ]
+        }
+      },
+      "01DHVDNAT4NY28P4T4WBWT50Z2": {
+        "id": "01DHVDNAT4NY28P4T4WBWT50Z2",
+        "kind": "menu_item",
+        "data": {
+          "title": "Carré Fonds",
+          "visible_in_aally": null
+        },
+        "relations": {
+          "icon": null,
+          "link": "01DGEZW4A5N07ZMX74NN2A9RV2_breadcrumb",
+          "submenu": null
+        },
+        "publication_date": "2019-07-01T00:00:00+02:00"
+      },
+      "01DHVDPMET15889FZ1BESZ80FE": {
+        "id": "01DHVDPMET15889FZ1BESZ80FE",
+        "kind": "menu_item",
+        "data": {
+          "title": "Partnerships",
+          "visible_in_aally": null
+        },
+        "relations": {
+          "icon": null,
+          "link": "01DGF3KKZA8BKCZ2WMZTN74TJ4_breadcrumb",
+          "submenu": null
+        },
+        "publication_date": "2019-07-01T00:00:00+02:00"
+      },
+      "01DHVDQ3DKGQG9W5RR0AWR8WST": {
+        "id": "01DHVDQ3DKGQG9W5RR0AWR8WST",
+        "kind": "menu",
+        "data": {
+          "title": "Steun Carré"
+        },
+        "relations": {
+          "items": [
+            "01DHVDNAT4NY28P4T4WBWT50Z2",
+            "01DHVDPMET15889FZ1BESZ80FE"
+          ]
+        }
+      },
+      "01DYJ2PPWPFWV7PNWADBWNQTV0": {
+        "id": "01DYJ2PPWPFWV7PNWADBWNQTV0",
+        "kind": "menu_item",
+        "data": {
+          "title": "Veelgestelde vragen",
+          "visible_in_aally": null
+        },
+        "relations": {
+          "icon": null,
+          "link": "01GKGY3CMAZ0T0X8GD0PQM3VH5_breadcrumb",
+          "submenu": null
+        }
+      },
+      "01EC23B1RSTSBR9ZHBC4A1KTBQ": {
+        "id": "01EC23B1RSTSBR9ZHBC4A1KTBQ",
+        "kind": "menu_item",
+        "data": {
+          "title": "Eten & drinken",
+          "visible_in_aally": null
+        },
+        "relations": {
+          "icon": null,
+          "link": "01DF8NDS2SAW08502TFK2YF6B0_breadcrumb",
+          "submenu": "01DHVDDE5X9YESQA6MW9GX3M0S"
+        },
+        "publication_date": "2019-07-01T00:00:00+02:00"
+      },
+      "01EGR7A9F12P6NXC2YVZAJACTZ": {
+        "id": "01EGR7A9F12P6NXC2YVZAJACTZ",
+        "kind": "menu_item",
+        "data": {
+          "link_url": "https://carrefonds.nl",
+          "title": "Steun Carré",
+          "visible_in_aally": false
+        },
+        "relations": {
+          "icon": null,
+          "link": null,
+          "submenu": "01DHVDQ3DKGQG9W5RR0AWR8WST"
+        }
+      },
+      "01EKAMZWZDNHQ10Z1GQVR4NE7F": {
+        "id": "01EKAMZWZDNHQ10Z1GQVR4NE7F",
+        "kind": "text_widget",
+        "data": {
+          "content": "",
+          "paymentmethods": null,
+          "socials": null,
+          "title": ""
+        },
+        "publication_date": "1021-12-18T00:00:00+00:19"
+      },
+      "01EKWFYTN7FTA7EZN902B3Y4SF": {
+        "id": "01EKWFYTN7FTA7EZN902B3Y4SF",
+        "kind": "menu_item",
+        "data": {
+          "link_url": "https://carre.nl/pagina/coronamaatregelen",
+          "title": "Coronamaatregelen",
+          "visible_in_aally": null
+        },
+        "relations": {
+          "icon": null,
+          "link": null,
+          "submenu": null
+        }
+      },
+      "01F46J6AF42HNZ7A6Q8QMBBK5N": {
+        "id": "01F46J6AF42HNZ7A6Q8QMBBK5N",
+        "kind": "menu_item",
+        "data": {
+          "link_url": "https://carre.nl/pagina/terras",
+          "title": "Terras op de Amstel ",
+          "visible_in_aally": false
+        },
+        "relations": {
+          "icon": null,
+          "link": null,
+          "submenu": null
+        }
+      },
+      "01F8QD8KDW98EC99J7PV6XAZG7": {
+        "id": "01F8QD8KDW98EC99J7PV6XAZG7",
+        "kind": "image_crop",
+        "data": {
+          "cdn_url_path": "5f3094b2-058d-4fa5-baae-2d1fbc284b60/-/crop/5156x1966/153,0/",
+          "crop_height": 1966,
+          "crop_type": "header_bg_wide",
+          "crop_width": 5156,
+          "crop_x": 153,
+          "crop_y": 0
+        },
+        "relations": {
+          "crop_of": "5f3094b2-058d-4fa5-baae-2d1fbc284b60"
+        }
+      },
+      "01F8QD9ZKHZAEM4GXS1J9BN8VN": {
+        "id": "01F8QD9ZKHZAEM4GXS1J9BN8VN",
+        "kind": "image_crop",
+        "data": {
+          "cdn_url_path": "1b7c7772-c1f4-4d13-93ef-c752b96a4149/-/crop/5616x2141/0,7/",
+          "crop_height": 2141,
+          "crop_type": "header_bg_wide",
+          "crop_width": 5616,
+          "crop_x": 0,
+          "crop_y": 7
+        },
+        "relations": {
+          "crop_of": "1b7c7772-c1f4-4d13-93ef-c752b96a4149"
+        }
+      },
+      "01FF57576337E3SX2S061NJH2E": {
+        "id": "01FF57576337E3SX2S061NJH2E",
+        "kind": "menu_item",
+        "data": {
+          "link_url": "https://mijn.carre.nl/verlanglijst",
+          "title": "Verlanglijst",
+          "visible_in_aally": null
+        },
+        "relations": {
+          "icon": null,
+          "link": null,
+          "submenu": null
+        }
+      },
+      "01FGP76H0B1X1Y6Y5QVZF9W6WW_breadcrumb": {
+        "id": "01FGP76H0B1X1Y6Y5QVZF9W6WW_breadcrumb",
+        "kind": "production-page-breadcrumb",
+        "data": {
+          "heading": "Diner in  Carré ",
+          "subHeading": "",
+          "title": "Diner in  Carré ",
+          "url": "/voorstelling/diner-in-carre",
+          "urlTranslated": null
+        }
+      },
+      "01FGP8146YNMFJEGAWF4CBHQY1": {
+        "id": "01FGP8146YNMFJEGAWF4CBHQY1",
+        "kind": "menu_item",
+        "data": {
+          "title": "Diner in Carré",
+          "visible_in_aally": null
+        },
+        "relations": {
+          "icon": null,
+          "link": "01FGP76H0B1X1Y6Y5QVZF9W6WW_breadcrumb",
+          "submenu": null
+        }
+      },
+      "01G88P56AN0471DR2EXQF94NE0": {
+        "id": "01G88P56AN0471DR2EXQF94NE0",
+        "kind": "icons",
+        "data": {
+          "description_en": "My Carré",
+          "description_nl": "Mijn Carré",
+          "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\"  fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">\n  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z\" />\n</svg>"
+        }
+      },
+      "01G88P8K3AA0DTWVKRNDQ5TJ4H": {
+        "id": "01G88P8K3AA0DTWVKRNDQ5TJ4H",
+        "kind": "menu_item",
+        "data": {
+          "link_url": "https://mijn.carre.nl",
+          "title": "Mijn Carré",
+          "visible_in_aally": null
+        },
+        "relations": {
+          "icon": "01G88P56AN0471DR2EXQF94NE0",
+          "link": null,
+          "submenu": null
+        }
+      },
+      "01GA3MJT1SM1ZXBGBQEP89TCS2": {
+        "id": "01GA3MJT1SM1ZXBGBQEP89TCS2",
+        "kind": "icons",
+        "data": {
+          "description_en": "Basket",
+          "description_nl": "Winkelmand",
+          "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 576 512\" fill=\"currentColor\">\n<!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc.-->\n  <path d=\"M171.7 191.1h232.6L322.7 35.07c-6.1-11.76-1.5-26.249 10.2-32.364 11.8-6.115 26.3-1.539 32.4 10.224l93.1 178.17H544c17.7 0 32 15.2 32 32 0 18.6-14.3 32-32 32l-51.9 208.4c-8 28.5-32.7 48.5-62.1 48.5H145.1c-28.5 0-54.1-20-61.22-48.5L32 255.1c-17.67 0-32-13.4-32-32 0-16.8 14.33-32 32-32h85.6l93.1-178.17c6.1-11.763 20.6-16.339 32.4-10.224 11.7 6.115 16.3 20.604 10.2 32.364L171.7 191.1zm19.4 112c0-8-6.3-16-16-16-7.9 0-16 8-16 16v96c0 9.7 8.1 16 16 16 9.7 0 16-6.3 16-16v-96zm80 0v96c0 9.7 8.1 16 16 16 9.7 0 16.9-6.3 16.9-16v-96c0-8-7.2-16-16.9-16-7.9 0-16 8-16 16zm144.9 0c0-8-7.2-16-16-16s-16 8-16 16v96c0 9.7 7.2 16 16 16s16-6.3 16-16v-96z\"/>\n</svg>"
+        }
+      },
+      "01GKGY3CMAZ0T0X8GD0PQM3VH5_breadcrumb": {
+        "id": "01GKGY3CMAZ0T0X8GD0PQM3VH5_breadcrumb",
+        "kind": "page-breadcrumb",
+        "data": {
+          "heading": "Veelgestelde vragen",
+          "subHeading": null,
+          "title": "Veelgestelde vragen",
+          "url": "/pagina/veelgestelde-vragen",
+          "urlTranslated": null
+        }
+      },
+      "01GPX3B1FRJ1Z809BH9Y2933TQ": {
+        "id": "01GPX3B1FRJ1Z809BH9Y2933TQ",
+        "kind": "news-page",
+        "data": {
+          "contentMain": "<p><em>Het Grootste Zwanenmeer </em>ter wereld uit China is vanaf 31 augustus t/m 17 september te bewonderen in Carr&eacute;. Op initiatief van Stardust Theatre, producent van dit indrukwekkende balletfeest, heeft de Engelse topchoreograaf Derek Deane zijn prachtige versie van <em>Het Grootste Zwanenmeer </em>ter wereld nieuw leven ingeblazen met het Shanghai Ballet.&nbsp;</p>\n\n<p>De scenes met 48 zwanen &ndash; twee keer zoveel als normaal &ndash; zijn van een ontroerende schoonheid. Deze imponerende versie van het Zwanenmeer was in 2017 in Carr&eacute; te zien en werd door publiek en pers omarmd met lovende kritieken:&nbsp;</p>\n\n<p style=\"text-align: center;\"><em>&ldquo;Adembenemend&hellip; buitenaards&hellip; ontroerende schoonheid&hellip; &nbsp;pure lyriek, breekbaar met veel gratie &hellip; virtuoos.&#39;&#39;<br />\n&quot;Een groot loepzuiver Zwanenmeer&hellip; Als een perfect impressionistisch schilderij&hellip;&quot;&nbsp;<br />\n&quot;Dit is het Zwanenmeer zoals het moet zijn en zoals je het zelden ziet.&rdquo;&nbsp;</em></p>\n\n<p>Ook internationaal oogstte het Shanghai Ballet furore waarmee het een sterke reputatie uitbouwde. &nbsp;</p>\n\n<p>Choreograaf Derek Deane zegt zelf over zijn meesterwerk: <em>&ldquo;Het is nog ontroerender en po&euml;tischer. Het zijn als het ware grote schilderijen van Degas, waarbij de verstilde &ldquo;tableaus&rdquo; telkens weer tot leven worden gewekt&rdquo;&nbsp;</em></p>\n\n<p>Zonder de authenticiteit van het Zwanenmeer aan te tasten heeft de voormalig artistiek leider van het&nbsp;English National Ballet met zijn adembenemende choreografie een prachtig hoofdstuk aan deze balletklassieker toegevoegd. &nbsp;</p>\n\n<p>Het iconische ballet met een tijdloos verhaal over goed en kwaad spreekt nog steeds tot de verbeelding.&nbsp;De fragiele ballerina&rsquo;s vormen een betoverend, homogeen geheel, dat in uitstraling en perfectie niet onder doet voor het Bolshoi of Mariinsky Ballet of The Royal Ballet in London. &nbsp;</p>\n\n<p>Derek Deane: <em>&ldquo;Dat was ook mijn grote leerschool. Als solist stond ik op de planken met Rudolf Nureyev en Margot Fonteyn. Ik werkte er in de gouden jaren met choreografen als Sir Frederick Ashton en Kenneth MacMillan. Al die ervaringen uit die tijd heb ik kunnen toepassen in deze versie van het Zwanenmeer.&rdquo; &nbsp;</em></p>\n\n<p>Derek Deane&rsquo;s belangrijkste uitdaging was, zegt hij, om de Chinese danseressen en dansers hun emoties te laten uiten en hun dans te verenigen met de muziek van Tsjaikovski. <em>&ldquo;Muziek is de basis van alles bij klassiek ballet. Als dat samengaat ontstaat er een magie die ontroert en je hart raakt.&rdquo;&nbsp;</em></p>\n\n<p>China toont hiermee aan dat het ook op het gebied van het klassieke ballet tot de wereldtop behoort en het Shanghai Ballet vleugels heeft gekregen. &nbsp;</p>\n",
+          "contentRemaining": "",
+          "copyright": "<p>&copy; Copyright Koninklijk Theater Carr&eacute;. Alle rechten voorbehouden.<br />\nKvK Amsterdam 33.02.39.60 &middot; BTW NL001438657.B01&nbsp;&middot;&nbsp;<a href=\"https://carre.nl/pagina/algemene-bezoekersvoorwaarden\">Algemene bezoekersvoorwaarden</a></p>\n",
+          "heading": "Het Grootste Zwanenmeer ter Wereld terug in Carré",
+          "hide": true,
+          "hideHeaderImage": false,
+          "main_sponsor_url": "https://carre.nl/pagina/sponsoring",
+          "seoDescription": null,
+          "seoKeywords": "",
+          "siteTitle": "Koninklijk Theater Carré Amsterdam",
+          "subheading": "Bejubelde danssensatie van 31 augustus t/m 17 september 2023 terug in Carré ",
+          "subscribeNewsletterHeading": "Carré nieuwsbrief",
+          "subscribeNewsletterSubheading": "Blijf altijd op de hoogte van de nieuwste voorstellingen bij Carré.",
+          "title": "Het Grootste Zwanenmeer ter Wereld terug in Carré",
+          "url": "/nieuwsitem/zwanenmeer-terug-in-carre",
+          "urlTranslated": null,
+          "youtubeUrl": null
+        },
+        "relations": {
+          "banners": [],
+          "faq_categories": [],
+          "footer": "DEFAULT_FOOTER",
+          "image_header_large": "01GPX4Q191E4MT8RCTMSGWNNSZ",
+          "image_header_small": "01GPX4Q193ZKWHETMCKPVS5K7E",
+          "image_sponsor": null,
+          "image_tabs": null,
+          "image_thumb": "01GPX4Q183MHZW9A9QKMCS1FTY",
+          "menu_main": "01DF8YQVDZ73ZJGN1FR5ESJHM5",
+          "menu_top": "01DFB6QX4F96PV1G5Y8VF97GKR",
+          "not_found_page": null,
+          "questions": [],
+          "slideshow": null,
+          "subfooter": "DEFAULT_SUBFOOTER",
+          "tabs": null
+        },
+        "publication_date": "2023-01-16T11:52:00+01:00"
+      },
+      "01GPX4Q183MHZW9A9QKMCS1FTY": {
+        "id": "01GPX4Q183MHZW9A9QKMCS1FTY",
+        "kind": "image_crop",
+        "data": {
+          "cdn_url_path": "19b7186b-f194-4633-a9a6-e84f4cb9b6eb/-/crop/2066x2066/0,213/",
+          "crop_height": 2066,
+          "crop_type": "thumbnail_square",
+          "crop_width": 2066,
+          "crop_x": 0,
+          "crop_y": 213
+        },
+        "relations": {
+          "crop_of": "19b7186b-f194-4633-a9a6-e84f4cb9b6eb"
+        }
+      },
+      "01GPX4Q191E4MT8RCTMSGWNNSZ": {
+        "id": "01GPX4Q191E4MT8RCTMSGWNNSZ",
+        "kind": "image_crop",
+        "data": {
+          "cdn_url_path": "9a3ca8fe-771b-486d-9f7e-6e579d625470/-/crop/2066x926/0,1015/",
+          "crop_height": 926,
+          "crop_type": "header_large",
+          "crop_width": 2066,
+          "crop_x": 0,
+          "crop_y": 1015
+        },
+        "relations": {
+          "crop_of": "9a3ca8fe-771b-486d-9f7e-6e579d625470"
+        }
+      },
+      "01GPX4Q193ZKWHETMCKPVS5K7E": {
+        "id": "01GPX4Q193ZKWHETMCKPVS5K7E",
+        "kind": "image_crop",
+        "data": {
+          "cdn_url_path": "9a3ca8fe-771b-486d-9f7e-6e579d625470/-/crop/2066x1033/0,921/",
+          "crop_height": 1033,
+          "crop_type": "header_small",
+          "crop_width": 2066,
+          "crop_x": 0,
+          "crop_y": 921
+        },
+        "relations": {
+          "crop_of": "9a3ca8fe-771b-486d-9f7e-6e579d625470"
+        }
+      },
+      "01GRKNS3RVCKPECEJGEJYD55XG": {
+        "id": "01GRKNS3RVCKPECEJGEJYD55XG",
+        "kind": "news-page",
+        "data": {
+          "contentMain": "<p><strong>Terwijl de cast nog druk aan het repeteren is, hebben De Graaf &amp; Cornelissen, Van Lambaart Entertainment en Koninklijk Theater Carr&eacute; vanwege de aanhoudende vraag naar kaarten besloten om de productie in Amsterdam te verlengen. De legendarische klassieker van Cameron Mackintosh, voorzien van een geheel nieuw decor en Nederlandse sterrencast, staat daarmee in 2023 meer dan 8 weken in Carr&eacute;; drie weken in maart en vijf weken in de zomerperiode. De kaartverkoop voor de extra voorstellingen van 24 juli tot en met 6 augustus 2023 start <a href=\"https://carre.nl/voorstelling/les-miserables\">hier</a> op donderdag 9 februari 10.00 uur.</strong></p>\n\n<p><strong>Madeleine van der Zwaan</strong>, directeur Koninklijk Theater Carr&eacute;: <em>&ldquo;We zijn trots om na 30 jaar een geheel nieuwe versie te mogen presenteren. Speciaal voor Carr&eacute; wordt er een extra groot decor gebouwd waardoor de beleving van het verhaal hier nog beter tot zijn recht komt.&rdquo;</em></p>\n\n<p><strong>Hans Cornelissen</strong>, creatief producent: <em>&ldquo;Wij als producenten zijn toch wel behoorlijk verrast door de succesvolle kaartverkoop. Deze overweldigende belangstelling in Carr&eacute; is een prachtig signaal. Het Nederlandse publiek lijkt Les Miserables weer te omarmen.&rdquo;</em></p>\n\n<p><strong>De productie</strong><br />\nDeze musical is wereldwijd ongekend populair bij bezoekers en pers. Met meer dan 100 internationale awards en vele geliefde nummers die tot klassiekers worden gerekend is <em>Les Mis&eacute;rables</em> <em>&ldquo;a reborn dream of a production&rdquo;&nbsp;</em>(Daily Telegraph). De voorspoedige kaartverkoop laat zien dat het Nederlands publiek deze musicalklassieker in het hart heeft gesloten. Daarnaast werden &lsquo;Breng hem thuis&rsquo; en &lsquo;Nog &eacute;&eacute;n dag&rsquo; tijdens de Uitmarkt 2021 in de top 10 gestemd binnen de categorie &lsquo;Favoriete musicalsong allertijden&rsquo;.</p>\n\n<p><strong>Het verhaal &nbsp;</strong><br />\n<em>Les Mis&eacute;rables</em> is een aangrijpend verhaal over gebroken dromen, onbeantwoorde liefde, passie, opoffering en verlossing &ndash; een tijdloze getuigenis van het overleven van de menselijke levenslust. Het stuk speelt zich af in het Frankrijk van de 19e eeuw en is gebaseerd op het aangrijpende boek van Victor Hugo.&nbsp;</p>\n\n<p>Na 19 jaar gevangenschap lijkt Jean Valjean zijn vrijheid tegemoet te gaan. Politie-inspecteur Javert helpt hem uit de droom en laat Jean Valjean weten aan welke voorwaarden hij de rest van zijn leven moet voldoen. Om hieraan te ontsnappen verscheurt Jean Valjean zijn vrijlatingsbrief en neemt een nieuwe identiteit aan. Door de jaren heen bewijst hij een goed persoon te zijn en probeert zijn verleden achter zich te laten. Lukt het Jean Valjean om uit handen te blijven van de geobsedeerde Javert, die hem koste wat kost wil bestraffen voor het breken van de voorwaarden?</p>\n\n<p><em>Les Mis&eacute;rables</em> is van 1 t/m 19 maart &eacute;n 5 juli t/m 6 augustus 2023 te zien in Carr&eacute;. Meer informatie en de exacte speeldata zijn te vinden op <a href=\"https://carre.nl/voorstelling/les-miserables\">carre.nl</a>. &nbsp;&nbsp;</p>\n",
+          "contentRemaining": "",
+          "copyright": "<p>&copy; Copyright Koninklijk Theater Carr&eacute;. Alle rechten voorbehouden.<br />\nKvK Amsterdam 33.02.39.60 &middot; BTW NL001438657.B01&nbsp;&middot;&nbsp;<a href=\"https://carre.nl/pagina/algemene-bezoekersvoorwaarden\">Algemene bezoekersvoorwaarden</a></p>\n",
+          "heading": "Populairste musical allertijden “Les Misérables” met twee weken verlengd",
+          "hide": true,
+          "hideHeaderImage": false,
+          "main_sponsor_url": "https://carre.nl/pagina/sponsoring",
+          "seoDescription": null,
+          "seoKeywords": null,
+          "siteTitle": "Koninklijk Theater Carré Amsterdam",
+          "subheading": "De legende is te zien van 1 t/m 19 maart én 5 juli t/m 6 augustus 2023 in Carré",
+          "subscribeNewsletterHeading": "Carré nieuwsbrief",
+          "subscribeNewsletterSubheading": "Blijf altijd op de hoogte van de nieuwste voorstellingen bij Carré.",
+          "title": "Les Misérables met twee weken verlengd",
+          "url": "/nieuwsitem/les-miserables-verlengd",
+          "urlTranslated": null,
+          "youtubeUrl": null
+        },
+        "relations": {
+          "banners": [],
+          "faq_categories": [],
+          "footer": "DEFAULT_FOOTER",
+          "image_header_large": "01GRKPHVVVY5KJJSR2A55VM5BX",
+          "image_header_small": "01GRKPHVW14PJM6PEDQNVEVK9P",
+          "image_sponsor": null,
+          "image_tabs": null,
+          "image_thumb": "01GRKPHVW4ZZ6KT54YYS06SYA1",
+          "menu_main": "01DF8YQVDZ73ZJGN1FR5ESJHM5",
+          "menu_top": "01DFB6QX4F96PV1G5Y8VF97GKR",
+          "not_found_page": null,
+          "questions": [],
+          "slideshow": null,
+          "subfooter": "DEFAULT_SUBFOOTER",
+          "tabs": null
+        },
+        "publication_date": "2023-02-06T16:33:00+01:00"
+      },
+      "01GRKPHVVVY5KJJSR2A55VM5BX": {
+        "id": "01GRKPHVVVY5KJJSR2A55VM5BX",
+        "kind": "image_crop",
+        "data": {
+          "cdn_url_path": "bcfcf1ac-4a92-4c33-897f-50ead01754e8/-/crop/4000x1791/0,83/",
+          "crop_height": 1791,
+          "crop_type": "header_large",
+          "crop_width": 4000,
+          "crop_x": 0,
+          "crop_y": 83
+        },
+        "relations": {
+          "crop_of": "bcfcf1ac-4a92-4c33-897f-50ead01754e8"
+        }
+      },
+      "01GRKPHVW14PJM6PEDQNVEVK9P": {
+        "id": "01GRKPHVW14PJM6PEDQNVEVK9P",
+        "kind": "image_crop",
+        "data": {
+          "cdn_url_path": "bcfcf1ac-4a92-4c33-897f-50ead01754e8/-/crop/3916x1958/42,0/",
+          "crop_height": 1958,
+          "crop_type": "header_small",
+          "crop_width": 3916,
+          "crop_x": 42,
+          "crop_y": 0
+        },
+        "relations": {
+          "crop_of": "bcfcf1ac-4a92-4c33-897f-50ead01754e8"
+        }
+      },
+      "01GRKPHVW4ZZ6KT54YYS06SYA1": {
+        "id": "01GRKPHVW4ZZ6KT54YYS06SYA1",
+        "kind": "image_crop",
+        "data": {
+          "cdn_url_path": "bcfcf1ac-4a92-4c33-897f-50ead01754e8/-/crop/1797x1797/2202,63/",
+          "crop_height": 1797,
+          "crop_type": "thumbnail_square",
+          "crop_width": 1797,
+          "crop_x": 2202,
+          "crop_y": 63
+        },
+        "relations": {
+          "crop_of": "bcfcf1ac-4a92-4c33-897f-50ead01754e8"
+        }
+      },
+      "19b7186b-f194-4633-a9a6-e84f4cb9b6eb": {
+        "id": "19b7186b-f194-4633-a9a6-e84f4cb9b6eb",
+        "kind": "image",
+        "data": {
+          "filename": "visual.jpg",
+          "height": 2492,
+          "mime_type": "image/jpeg",
+          "tags": [
+            "chinees ballet",
+            "ballet",
+            "2023",
+            "zwanenmeer",
+            "Het grootste zwanenmeer"
+          ],
+          "title": "Zwanenmeer - 2023",
+          "width": 2066
+        }
+      },
+      "1b7c7772-c1f4-4d13-93ef-c752b96a4149": {
+        "id": "1b7c7772-c1f4-4d13-93ef-c752b96a4149",
+        "kind": "image",
+        "data": {
+          "filename": "carre-ad-amstel-avond-img-7600.jpg",
+          "height": 2156,
+          "mime_type": "image/jpeg",
+          "tags": [
+            "carre aan de amstel",
+            "carre algemeen",
+            "carre buitenkant",
+            "amstel"
+          ],
+          "title": null,
+          "width": 5616
+        }
+      },
+      "5f3094b2-058d-4fa5-baae-2d1fbc284b60": {
+        "id": "5f3094b2-058d-4fa5-baae-2d1fbc284b60",
+        "kind": "image",
+        "data": {
+          "filename": "headerfoto-daglicht.jpg",
+          "height": 1966,
+          "mime_type": "image/jpeg",
+          "tags": [
+            "amstel",
+            "carre buitenkant"
+          ],
+          "title": null,
+          "width": 5463
+        }
+      },
+      "9a3ca8fe-771b-486d-9f7e-6e579d625470": {
+        "id": "9a3ca8fe-771b-486d-9f7e-6e579d625470",
+        "kind": "image",
+        "data": {
+          "filename": "zwanenmeer-carre-poster-729-x-879-mm-j.jpg",
+          "height": 2492,
+          "mime_type": "image/jpeg",
+          "tags": [
+            "het grootste zwanenmeer",
+            "2023",
+            "shanghai ballet",
+            "zwanenmeer",
+            "ballet",
+            "grootste zwanenmeer"
+          ],
+          "title": "Het Grootste Zwanenmeer - 2023",
+          "width": 2066
+        }
+      },
+      "DEFAULT_FOOTER": {
+        "id": "DEFAULT_FOOTER",
+        "kind": "footer",
+        "data": {},
+        "relations": {
+          "widgets": [
+            "01DF8GMTD916Q97JT9D02BJQKE",
+            "01DF8GS1F20XPBNX4BATG0R1CW",
+            "01DHVA1A8JJMS1T6W481Q81QCY",
+            "01DHV9XPQ2TGGKVWQ1XY926HPZ"
+          ]
+        }
+      },
+      "DEFAULT_SUBFOOTER": {
+        "id": "DEFAULT_SUBFOOTER",
+        "kind": "subfooter",
+        "data": {}
+      },
+      "bcfcf1ac-4a92-4c33-897f-50ead01754e8": {
+        "id": "bcfcf1ac-4a92-4c33-897f-50ead01754e8",
+        "kind": "image",
+        "data": {
+          "filename": "webbanner-les-miserables.jpg",
+          "height": 1958,
+          "mime_type": "image/jpeg",
+          "tags": [
+            "2023",
+            "les miserables"
+          ],
+          "title": "les miserables - tekst",
+          "width": 4000
+        }
+      },
+      "home-news-pages-nl": {
+        "id": "home-news-pages-nl",
+        "kind": "home-news-pages",
+        "data": {
+          "title": "Nieuws"
+        },
+        "query_result": {
+          "node_ids": [
+            "01GRKNS3RVCKPECEJGEJYD55XG",
+            "01GPX3B1FRJ1Z809BH9Y2933TQ"
+          ],
+          "per_page": 2
+        }
+      },
+      "home-nl": {
+        "id": "home-nl",
+        "kind": "home",
+        "data": {
+          "alternativeHomepage": false,
+          "copyright": "<p>&copy; Copyright Koninklijk Theater Carr&eacute;. Alle rechten voorbehouden.<br />\nKvK Amsterdam 33.02.39.60 &middot; BTW NL001438657.B01&nbsp;&middot;&nbsp;<a href=\"https://carre.nl/pagina/algemene-bezoekersvoorwaarden\">Algemene bezoekersvoorwaarden</a></p>\n",
+          "headerImagePositionDay": "center top",
+          "headerImagePositionNight": "center top",
+          "headerTitle": "Welkom",
+          "hideHeaderTitleMobile": false,
+          "main_sponsor_url": "https://carre.nl/pagina/sponsoring",
+          "maxHighlights": 9,
+          "pinnedSlideIDs": [
+            "01G279QKVWKTHGW1G5CAJ53V1R"
+          ],
+          "siteTitle": "Koninklijk Theater Carré Amsterdam",
+          "subscribeNewsletterHeading": "Carré nieuwsbrief",
+          "subscribeNewsletterSubheading": "Blijf altijd op de hoogte van de nieuwste voorstellingen bij Carré.",
+          "youtubeURL": null
+        },
+        "relations": {
+          "banners": [],
+          "footer": "DEFAULT_FOOTER",
+          "header_image_day": "01F8QD8KDW98EC99J7PV6XAZG7",
+          "header_image_mobile": null,
+          "header_image_night": "01F8QD9ZKHZAEM4GXS1J9BN8VN",
+          "image_sponsor": null,
+          "menu_main": "01DF8YQVDZ73ZJGN1FR5ESJHM5",
+          "menu_top": "01DFB6QX4F96PV1G5Y8VF97GKR",
+          "newsPageQuery": "home-news-pages-nl",
+          "subfooter": "DEFAULT_SUBFOOTER",
+          "text_widget": "01EKAMZWZDNHQ10Z1GQVR4NE7F",
+          "text_widget_2": null
+        }
+      }
+    },
+    "filters": {
+      "genres": {
+        "values": [
+          {
+            "id": "amusement",
+            "data": {
+              "name": "Amusement"
+            }
+          },
+          {
+            "id": "ballet",
+            "data": {
+              "name": "Ballet"
+            }
+          },
+          {
+            "id": "cabaret",
+            "data": {
+              "name": "Cabaret"
+            }
+          },
+          {
+            "id": "comedy_international",
+            "data": {
+              "name": "Comedy International"
+            }
+          },
+          {
+            "id": "concert_binnenlands",
+            "data": {
+              "name": "Concert Binnenlands"
+            }
+          },
+          {
+            "id": "concert_buitenlands",
+            "data": {
+              "name": "Concert Buitenlands"
+            }
+          },
+          {
+            "id": "dans",
+            "data": {
+              "name": "Dans"
+            }
+          },
+          {
+            "id": "literatuur",
+            "data": {
+              "name": "Literatuur"
+            }
+          },
+          {
+            "id": "musical",
+            "data": {
+              "name": "Musical"
+            }
+          },
+          {
+            "id": "opera",
+            "data": {
+              "name": "Opera"
+            }
+          },
+          {
+            "id": "pop",
+            "data": {
+              "name": "Pop"
+            }
+          },
+          {
+            "id": "toneel",
+            "data": {
+              "name": "Toneel"
+            }
+          },
+          {
+            "id": "variété",
+            "data": {
+              "name": "Variété"
+            }
+          }
+        ],
+        "data": {}
+      }
+    }
+  }
