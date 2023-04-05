@@ -6,9 +6,12 @@ import csv
 import json
 
 from file_saver import FileSaver
+from mysql_saver import MySQLSaver
 
 from agenda_scraping_logging import AgendaScrapingLogging
 logger = AgendaScrapingLogging.get_logger('ams_delamar')
+
+from date_converter import convert_date
 
 NOW = datetime.now()
 
@@ -85,39 +88,58 @@ def get_production_list():
 
         production_id = show['ShowId']
         production_title = show['Title']
-        production_date = show['DateCompact']
+        production_subtitle = show['Subtitle']
         production_url = f'https://delamar.n{show["Url"]}'
 
-        match = re.findall('\D{2} \d{2} \D{3}', production_date)
-        if len(match) == 1 :
-            production_start_date = match[0]
-            production_end_date = ''
-        elif len(match) > 1:  
-            #   do 13 apr t/m zo 07 mei 
-            # or
-            #   do 13 apr t/m zo 07 mei        # TODO: What to do in these cases? 
-            #   do 18 mei t/m zo 21 mei
+        # Covering cases like:
+        # DateCompact: do 13 apr t/m zo 07 mei
+        # DateCompact2: do 18 mei t/m zo 21 mei
+        for date_key in ['DateCompact', 'DateCompact2']: 
+            
+            # Process DateCompact2 if:
+            #   DateCompact: 'do 13 apr t/m zo 07 mei'
+            #   DateCompact2: 'do 18 mei t/m zo 21 mei'
+            # and not
+            #   DateCompact: 'do 13 apr t/m zo 07 mei'
+            #   DateCompact2: '' 
+            if date_key in show and len(show[date_key].strip()) > 0: 
 
-            production_start_date = match[0]
-            production_end_date = match[1]
-        else:
-            production_start_date = 'Vandaag' # TODO: Translate to a date?
-            production_end_date = ''
-        
-        production_time = '' # TODO: Where is it?
+                production_date = show[date_key]   
+                match = re.findall('\D{2} \d{2} \D{3}', production_date)
+                if len(match) == 1 :
+                    production_start_date = convert_date(match[0])
+                    production_end_date = convert_date(match[0])
+                elif len(match) > 1:  
+                    production_start_date = convert_date(match[0])
+                    production_end_date = convert_date(match[1])
+                else:
+                    production_start_date = NOW.strftime('%Y-%m-%d') # TODO: Reasonable?
+                    production_end_date = NOW.strftime('%Y-%m-%d')
+                
+                production_time = '' # TODO: Where is it?
 
-        productions.append({
-            'city' : 'Amsterdan',
-            'theater' : 'De La Mar',
-            'id' : production_id,
-            'showName' : production_title,
-            'startDate' : production_start_date,
-            'endDate' : production_end_date,
-            'time' : production_time,
-            'linkToShow' : production_url
-        })
 
-        del production_id, production_title, production_date, production_start_date, production_end_date, production_time, production_url
+                # TODO: Refactor later
+                # Not the best solution.
+                # DateCompact: 'za 03 jun t/m vr 31 mrt'
+                # DateCompact2: 'za 03 jun'
+                if date_key == 'DateCompact2' and production_start_date == last_start_date:
+                    break
+
+                productions.append({
+                    'city' : 'Amsterdan',
+                    'theater' : 'De La Mar',
+                    'id' : production_id,
+                    'showName' : f'{production_title} - {production_subtitle}',
+                    'startDate' : production_start_date,
+                    'endDate' : production_end_date,
+                    'time' : production_time,
+                    'linkToShow' : production_url
+                })
+
+                last_start_date = production_start_date
+
+        del production_id, production_title, production_date, production_start_date, production_end_date, production_time, production_url, last_start_date
 
     logger.debug(f'{len(productions)} found')
     return productions
@@ -156,5 +178,7 @@ def main(data_saver):
     data_saver.save(productions)
 
 if __name__ == '__main__':
-    main(FileSaver('ams-delamar'))
+    saver = FileSaver('ams-delamar')
+    saver = MySQLSaver()
 
+    main(saver)
