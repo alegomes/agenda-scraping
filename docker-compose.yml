@@ -1,23 +1,48 @@
-# Run it with
-# docker-compose up
+
+# docker-compose up [-d] [--build]
+# docker-compose down
+# docker exec -it db bash
+# docker exec -it db bash
 
 version: '3.5'
 services:
-    backend:
+    app:
         image: agenda-scraping
-        # ports:
-        #     - "80:80"
-    database:
-        image: agenda-sccraping-db
+        build: 
+            context: .
+            dockerfile: Dockerfile
+        container_name: app
+        tty: true
+        volumes:
+            - ./log:/app/log
+        networks:
+            - agendanet
+
+    db:
+        image: agenda-scraping-db
+        build: 
+            context: .
+            dockerfile: Dockerfile-MySQL
+        command: --innodb-use-native-aio=0
+        container_name: db
+        restart: always
+        tty: true
         ports:
             - "3306:3036"
         environment:
             MYSQL_ALLOW_EMPTY_PASSWORD: True
             MYSQL_ROOT_PASSWORD: 
             MYSQL_DATABASE: agenda_scraping
-            MYSQL_USER: scraper
-            MYSQL_PASSWORD: xxxxxxx
+            MYSQL_USER: xxxx
+            MYSQL_PASSWORD: xxxxxx
         volumes:
-            db-volume:/var/lib/mysql
-volumes:
-    db-volume:
+            - ./mysql:/var/lib/mysql
+        networks:
+            - agendanet
+# volumes:
+#     db-volume:
+#         - ./mysql
+
+networks:
+    agendanet:
+        driver: bridge
