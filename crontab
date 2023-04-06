@@ -1,5 +1,5 @@
 # START CRON JOB
-* * * * * cd /app ; python3 /app/hello.py
+* * * * * cd /app ; python3 src/hello.py
 # END CRON JOB
 
 # Debug

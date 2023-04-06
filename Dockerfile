@@ -10,6 +10,9 @@
 #
 # Run and see sysout:
 # docker run -it --mount type=bind,source="$(pwd)"/log,target="/app/log" agenda-scraper-job
+#
+# Just get into it
+# docker exec -it agenda-scraper-job bash
 
 FROM python:3.9-alpine
 
@@ -17,8 +20,7 @@ RUN apk update ; apk upgrade ; apk add bash
 
 WORKDIR /app
 
-COPY hello.py /app/hello.py
-COPY agenda_scraping_logging.py /app/
+COPY src /app/src
 COPY crontab /app/crontab
 
 RUN mkdir log
