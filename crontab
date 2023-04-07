@@ -1,5 +1,5 @@
 # START CRON JOB
-* * * * * cd /app ; python3 src/hello.py
+* * * * * cd /app ; python3 src/ams_meervaart.py
 # END CRON JOB
 
 # Debug

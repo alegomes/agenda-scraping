@@ -4,7 +4,9 @@ import locale
 
 # To avoid errors like 
 # ValueError: time data '2023-mei-1' does not match format '%Y-%b-%d'  
-locale.setlocale(locale.LC_TIME, 'nl_NL')
+# locale.setlocale(locale.LC_TIME, 'nl_NL')
+locale.setlocale(locale.LC_TIME, "nl_NL.UTF-8")
+
 
 NOW = datetime.now()
 

@@ -12,7 +12,7 @@ class MySQLSaver(DataSaver):
 
     def __init__(self):
         self.connection = mysql.connector.connect(
-            host="localhost",
+            host="db", # TODO: "localhost" when running local on the host machine
             user="scraper",
             password="brentmartens",
             database="agenda_scraping"

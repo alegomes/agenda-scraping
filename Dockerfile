@@ -14,16 +14,26 @@
 # Just get into it
 # docker exec -it agenda-scraper-job bash
 
-FROM python:3.9-alpine
+FROM python:3.11-alpine
 
-RUN apk update ; apk upgrade ; apk add bash
+ENV MUSL_LOCPATH="/usr/share/i18n/locales/musl"
+
+RUN apk update ; apk upgrade 
+
+RUN apk --no-cache add \
+    bash \
+    musl-locales \
+    musl-locales-lang 
 
 WORKDIR /app
 
 COPY src /app/src
 COPY crontab /app/crontab
 
+RUN pip install -r src/requirements.txt
+
 RUN mkdir log
+RUN mkdir -p data/raw
 
 RUN chmod 0644 /app/crontab
 RUN crontab /app/crontab
