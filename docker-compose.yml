@@ -36,8 +36,8 @@ services:
             MYSQL_ALLOW_EMPTY_PASSWORD: True
             MYSQL_ROOT_PASSWORD: 
             MYSQL_DATABASE: agenda_scraping
-            MYSQL_USER: /run/secrets/mysqluser
-            MYSQL_PASSWORD: /run/secrets/mysqlpass
+            MYSQL_USER_FILE: /run/secrets/mysqluser
+            MYSQL_PASSWORD_FILE: /run/secrets/mysqlpass
         volumes:
             - ./mysql:/var/lib/mysql
         networks:
