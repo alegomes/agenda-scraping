@@ -1,5 +1,6 @@
 # START CRON JOB
-* * * * * cd /app ; python3 src/ams_meervaart.py
+MAILTO="alegomes@gmail.com"
+0 * * * * cd /app ; python3 src/main.py
 # END CRON JOB
 
 # Debug
