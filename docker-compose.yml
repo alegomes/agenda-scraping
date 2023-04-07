@@ -29,12 +29,15 @@ services:
         tty: true
         ports:
             - "3306:3036"
+        secrets:
+            - mysqluser
+            - mysqlpass
         environment:
             MYSQL_ALLOW_EMPTY_PASSWORD: True
             MYSQL_ROOT_PASSWORD: 
             MYSQL_DATABASE: agenda_scraping
-            MYSQL_USER: xxxx
-            MYSQL_PASSWORD: xxxxxx
+            MYSQL_USER: /run/secrets/mysqluser
+            MYSQL_PASSWORD: /run/secrets/mysqlpass
         volumes:
             - ./mysql:/var/lib/mysql
         networks:
@@ -46,3 +49,9 @@ services:
 networks:
     agendanet:
         driver: bridge
+
+secrets:
+    mysqluser:
+        environment: "MYSQL_USER"
+    mysqlpass:
+        environment: "MYSQL_PASSWORD"
