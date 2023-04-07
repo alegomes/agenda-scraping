@@ -24,6 +24,21 @@ def convert_date(dutch_date):
     
     show_date = None
 
+    # Dutch expected abbreviations:
+    # januari jan
+    # februari feb
+    # maart maa
+    # april apr
+    # mei mei
+    # juni jun
+    # juli jul
+    # augustus aug
+    # september sep
+    # oktober okt
+    # november nov
+    # december dec
+    month = 'maa' if month == 'mrt' else month
+
     try:
         show_date = datetime.strptime(f'{year}-{month}-{day}', '%Y-%b-%d')
     except Exception as e:
