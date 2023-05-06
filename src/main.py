@@ -1,3 +1,5 @@
+import traceback
+
 import ams_carre
 import ams_dekleine
 import ams_delamar
@@ -31,3 +33,4 @@ if __name__ == '__main__':
         main()
     except Exception as e:
         logger.error(f'Oops. Something went wrong: {e}')
+        traceback.print_exc()
