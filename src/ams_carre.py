@@ -12,10 +12,10 @@ logger = AgendaScrapingLogging.get_logger('ams_carre')
 NOW = datetime.now()
 PRODUCTIONS_KEY = 'nodes'
 
-def _save_response_content(data):
+def _save_response_content(id, data):
     global NOW
 
-    filename = f'data/raw/ams-carre-productions-raw-{NOW.strftime("%Y%m%d%H%M")}.json'
+    filename = f'data/raw/ams-carre-production-{id}-raw-{NOW.strftime("%Y%m%d%H%M")}.json'
 
     logger.debug(f'Saving raw data at {filename}')
 
@@ -26,10 +26,12 @@ def _save_response_content(data):
 def get_production_details(id, path):
     url = f"https://carre.nl/api/render{path}"
 
+    logger.debug(f'Getting production {id} details at {path}...')
+
     headers = {}
     response = requests.get(url, headers=headers)
 
-    _save_response_content(response.text)
+    _save_response_content(id, response.text)
 
     data = json.loads(response.text)
 
@@ -74,8 +76,6 @@ def summarize_productions(productions):
             theater_name = productions[k]['data']['siteTitle']
             path  = productions[k]['data']['url']
             
-            logger.debug(f'Enriching production {id} at {path}...')
-
             try:
                 details = get_production_details(id, path)
                 summary.append({

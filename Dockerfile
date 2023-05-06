@@ -23,7 +23,8 @@ RUN apk update ; apk upgrade
 RUN apk --no-cache add \
     bash \
     musl-locales \
-    musl-locales-lang 
+    musl-locales-lang \
+    ssmtp
 
 WORKDIR /app
 

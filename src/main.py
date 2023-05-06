@@ -3,8 +3,12 @@ import ams_dekleine
 import ams_delamar
 import ams_meervaart
 
+from agenda_scraping_logging import AgendaScrapingLogging
+
 from file_saver import FileSaver
 from mysql_saver import MySQLSaver
+
+logger = AgendaScrapingLogging.get_logger('main')
 
 def main():
     # saver_ams_carre = FileSaver('ams-carre')
@@ -23,4 +27,7 @@ def main():
     ams_meervaart.main( MySQLSaver())
 
 if __name__ == '__main__':
-    main()
+    try:
+        main()
+    except Exception as e:
+        logger.error(f'Oops. Something went wrong: {e}')
