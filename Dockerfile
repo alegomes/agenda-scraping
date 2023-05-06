@@ -2,8 +2,11 @@
 # Build Image
 # docker build -t agenda-scraper-job .
 #
+# Create agenda-net, if it doesn't exist yet
+# docker create network agenda-net
+#
 # Run it and leave
-# docker run -d --mount type=bind,source="$(pwd)"/log,target="/app/log" agenda-scraper-job
+# docker run --name job --network agenda-net -d --mount type=bind,source="$(pwd)"/log,target="/app/log" agenda-scraper-job
 #
 # Run and log into it
 # docker run -it --mount type=bind,source="$(pwd)"/log,target="/app/log" agenda-scraper-job bash
@@ -12,7 +15,7 @@
 # docker run -it --mount type=bind,source="$(pwd)"/log,target="/app/log" agenda-scraper-job
 #
 # Just get into it
-# docker exec -it agenda-scraper-job bash
+# docker exec -it job bash
 
 FROM python:3.11-alpine
 

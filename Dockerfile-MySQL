@@ -1,8 +1,11 @@
 # Building Image
 # docker build -f Dockerfile-MySQL -t agenda-scraping-db .
 #
+# Create agenda-net network
+# docker network create agenda-net
+
 # Running Container:
-# docker run -d -p 3306:3306 -e MYSQL_ALLOW_EMPTY_PASSWORD=True -e MYSQL_ROOT_PASSWORD='' -e MYSQL_DATABASE=agenda_scraping -e MYSQL_USER=scraper -e MYSQL_PASSWORD=brentmartens agenda-scraping-db
+# docker run --name db --rm --network agenda-net -d -p 3306:3306 -e MYSQL_ALLOW_EMPTY_PASSWORD=True -e MYSQL_ROOT_PASSWORD='' -e MYSQL_DATABASE=agenda_scraping -e MYSQL_USER=scraper -e MYSQL_PASSWORD=brentmartens agenda-scraping-db
 #
 # Get into it:
 # docker exec -it $(docker ps | grep agenda-scraping-db | cut -d ' ' -f 1) bash
