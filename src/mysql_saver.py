@@ -1,6 +1,7 @@
+import os
+import sys
 from datetime import datetime
 import mysql.connector
-
 from data_saver import DataSaver
 
 from agenda_scraping_logging import AgendaScrapingLogging
@@ -11,10 +12,28 @@ NOW = datetime.now()
 class MySQLSaver(DataSaver):
 
     def __init__(self):
+
+        dbhost = os.getenv('MYSQL_HOST')
+        dbuser = os.getenv('MYSQL_USER')
+        dbpass = os.getenv('MYSQL_PASSWORD')
+
+        if not dbhost:
+            logger.debug('MYSQL_HOST not defined. Using default value "localhost"')
+            dbhost="localhost"
+
+        if not dbuser:
+            logger.error('Environment variable MYSQL_USER required.')
+            sys.exit(-1)
+
+        if not dbpass:
+            logger.error('Environment variable MYSQL_PASSWORD required.')
+            sys.exit(-1)
+
         self.connection = mysql.connector.connect(
-            host="db", # TODO: "localhost" when running local on the host machine
-            user="scraper",
-            password="brentmartens",
+            host=dbhost, # TODO: "localhost" when running local on the host machine
+            port=3306,
+            user=dbuser,
+            password=dbpass,
             database="agenda_scraping"
         )
 
