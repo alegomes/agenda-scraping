@@ -1,17 +1,20 @@
 
 # docker-compose up [-d] [--build]
+#   MYSQL_USER=some_username MYSQL_PASSWORD=some_password docker-compose up -d --build
 # docker-compose down
 # docker exec -it db bash
 # docker exec -it db bash
 
 version: '3.5'
 services:
-    app:
-        image: agenda-scraping
+    job:
+        image: agenda-scraping-job
+        depends_on:
+            - db
         build: 
             context: .
             dockerfile: Dockerfile
-        container_name: app
+        container_name: job
         tty: true
         volumes:
             - ./log:/app/log
@@ -30,10 +33,10 @@ services:
         restart: always
         tty: true
         ports:
-            - "3306:3036"
-        secrets:
-            - mysqluser
-            - mysqlpass
+            - 3306:3036
+        secrets:        # Expose it to `docker up`
+                - mysqluser
+                - mysqlpass
         environment:
             MYSQL_ALLOW_EMPTY_PASSWORD: True
             MYSQL_ROOT_PASSWORD: 
