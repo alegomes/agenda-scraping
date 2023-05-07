@@ -6,7 +6,7 @@
 # docker create network agenda-net
 #
 # Run it and leave
-# docker run --name job --network agenda-net -d --mount type=bind,source="$(pwd)"/log,target="/app/log" agenda-scraper-job
+# docker run --name job --network agenda-net --rm -d --mount type=bind,source="$(pwd)"/log,target="/app/log" agenda-scraper-job
 #
 # Run and log into it
 # docker run -it --mount type=bind,source="$(pwd)"/log,target="/app/log" agenda-scraper-job bash
