@@ -1,9 +1,19 @@
-
-# docker-compose up [-d] [--build]
-#   MYSQL_USER=some_username MYSQL_PASSWORD=some_password docker-compose up -d --build
-# docker-compose down
-# docker exec -it db bash
-# docker exec -it db bash
+# Database Reset
+#
+# Check if there is any MYSQL env variable defined. Unset if any.
+# set | grep -i mysql
+#
+# Delete database data (caution!!!)
+# rm -rf mysql/*
+#
+# Stop and remove containers
+# ./drm.sh
+#
+# Startup containers up
+# ./dup.sh
+#
+# Log into the database container
+# ./mysql.sh
 
 version: '3.5'
 services:
@@ -28,6 +38,9 @@ services:
         build: 
             context: .
             dockerfile: Dockerfile-MySQL
+            # secrets:        # Expose it to `docker run` and `docker compose up`
+            #     - mysqluser
+            #     - mysqlpass
         command: --innodb-use-native-aio=0
         container_name: db
         restart: always
@@ -35,8 +48,8 @@ services:
         ports:
             - 3306:3036
         secrets:        # Expose it to `docker up`
-                - mysqluser
-                - mysqlpass
+            - mysqluser
+            - mysqlpass
         environment:
             MYSQL_ALLOW_EMPTY_PASSWORD: True
             MYSQL_ROOT_PASSWORD: 
