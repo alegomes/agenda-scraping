@@ -22,20 +22,28 @@ class MySQLSaver(DataSaver):
             dbhost="localhost"
 
         if not dbuser:
-            logger.error('Environment variable MYSQL_USER required.')
-            sys.exit(-1)
+            msg = 'Environment variable MYSQL_USER required.'
+            logger.error(msg)
+            raise Exception(msg)
 
         if not dbpass:
-            logger.error('Environment variable MYSQL_PASSWORD required.')
-            sys.exit(-1)
+            msg = 'Environment variable MYSQL_PASS required.'
+            logger.error(msg)
+            raise Exception(msg)
 
-        self.connection = mysql.connector.connect(
-            host=dbhost, # TODO: "localhost" when running local on the host machine
-            port=3306,
-            user=dbuser,
-            password=dbpass,
-            database="agenda_scraping"
-        )
+        logger.debug(f'Connecting to database with user={dbuser}...')
+
+        try:
+            self.connection = mysql.connector.connect(
+                host=dbhost,
+                port=3306,
+                user=dbuser,
+                password=dbpass,
+                database="agenda_scraping"
+            )
+        except BaseException as e:
+            logger.error(f'Failed to connect to the database host={dbhost} user={dbuser}: {e}')
+            raise e
 
     def save(self, productions):
         mycursor = self.connection.cursor()

@@ -32,6 +32,10 @@ services:
             - /dev/log:/dev/log
         networks:
             - agendanet
+        environment: # Exposes env vars from .env file to the service container
+            - MYSQL_HOST=db
+            - MYSQL_USER
+            - MYSQL_PASSWORD
 
     db:
         image: agenda-scraping-db
