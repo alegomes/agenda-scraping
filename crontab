@@ -1,6 +1,9 @@
 # START CRON JOB
 MAILTO="alegomes@gmail.com"
+# Dev
 */10 * * * * cd /app ; python3 src/main.py
+# Prod
+# 0 23 * * * cd /app ; python3 src/main.py >/dev/null 2>&1
 # END CRON JOB
 
 # Debug
